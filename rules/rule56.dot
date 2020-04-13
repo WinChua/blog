@@ -1,0 +1,12 @@
+
+
+digraph not_test {
+  0->1[label=epsilon]
+  1->2[label="not"]
+  2->3[label=epsilon]
+  3->4[label=not_test]
+  4->5[label=epsilon]
+  0->6[label=epsilon]
+  6->7[label=comparison]
+  7->5[label=epsilon]
+}

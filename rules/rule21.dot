@@ -1,0 +1,6 @@
+
+digraph pass_stmt {
+  0->1[label=epsilon]
+  1->2[label="pass"]
+  2->3[label=epsilon]
+}

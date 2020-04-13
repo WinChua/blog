@@ -1,0 +1,13 @@
+
+digraph and_test {
+  0->1[label=epsilon]
+  1->2[label=not_test]
+  2->3[label=epsilon]
+  3->4[label=epsilon]
+  4->5[label="and"]
+  5->6[label=epsilon]
+  6->7[label=not_test]
+  7->8[label=epsilon]
+  8->3[label=epsilon]
+  3->9[label=epsilon]
+}

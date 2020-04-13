@@ -1,0 +1,16 @@
+
+
+
+digraph single_input {
+  0->1[label=epsilon]
+  1->2[label=NEWLINE]
+  2->3[label=epsilon]
+  0->4[label=epsilon]
+  4->5[label=simple_stmt]
+  5->3[label=epsilon]
+  0->6[label=epsilon]
+  6->7[label=compound_stmt]
+  7->8[label=epsilon]
+  8->9[label=NEWLINE]
+  9->3[label=epsilon]
+}

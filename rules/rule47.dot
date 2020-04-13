@@ -1,0 +1,18 @@
+
+digraph except_clause {
+  0->1[label=epsilon]
+  1->2[label="except"]
+  2->3[label=epsilon]
+  3->4[label=epsilon]
+  4->5[label=test]
+  5->6[label=epsilon]
+  6->7[label=epsilon]
+  7->8[label="as"]
+  8->9[label=epsilon]
+  9->10[label=NAME]
+  10->11[label=epsilon]
+  11->12[label=epsilon]
+  12->13[label=epsilon]
+  6->11[label=epsilon]
+  3->12[label=epsilon]
+}

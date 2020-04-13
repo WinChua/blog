@@ -1,0 +1,13 @@
+
+digraph dotted_as_names {
+  0->1[label=epsilon]
+  1->2[label=dotted_as_name]
+  2->3[label=epsilon]
+  3->4[label=epsilon]
+  4->5[label=","]
+  5->6[label=epsilon]
+  6->7[label=dotted_as_name]
+  7->8[label=epsilon]
+  8->3[label=epsilon]
+  3->9[label=epsilon]
+}

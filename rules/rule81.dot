@@ -1,0 +1,10 @@
+
+
+digraph comp_iter {
+  0->1[label=epsilon]
+  1->2[label=comp_for]
+  2->3[label=epsilon]
+  0->4[label=epsilon]
+  4->5[label=comp_if]
+  5->3[label=epsilon]
+}

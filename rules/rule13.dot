@@ -1,0 +1,10 @@
+
+
+digraph stmt {
+  0->1[label=epsilon]
+  1->2[label=simple_stmt]
+  2->3[label=epsilon]
+  0->4[label=epsilon]
+  4->5[label=compound_stmt]
+  5->3[label=epsilon]
+}

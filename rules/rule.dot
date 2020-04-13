@@ -1,0 +1,285 @@
+
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c4de10> - NEWLINE - <hand_nfa_state.DFAState object at 0x7f9033c4de50>
+<hand_nfa_state.DFAState object at 0x7f9033c4de10> - simple_stmt - <hand_nfa_state.DFAState object at 0x7f9033c4dc10>
+<hand_nfa_state.DFAState object at 0x7f9033d12050> - NEWLINE - <hand_nfa_state.DFAState object at 0x7f9033d12090>
+<hand_nfa_state.DFAState object at 0x7f9033c4de10> - compound_stmt - <hand_nfa_state.DFAState object at 0x7f9033d12050>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c1d090> - NEWLINE - <hand_nfa_state.DFAState object at 0x7f9033c1d090>
+<hand_nfa_state.DFAState object at 0x7f9033d12f90> - NEWLINE - <hand_nfa_state.DFAState object at 0x7f9033c1d090>
+<hand_nfa_state.DFAState object at 0x7f9033d12f50> - testlist - <hand_nfa_state.DFAState object at 0x7f9033d12f90>
+
+<hand_nfa_state.DFAState object at 0x7f9033c1d950> - dotted_name - <hand_nfa_state.DFAState object at 0x7f9033c1da10>
+<hand_nfa_state.DFAState object at 0x7f9033c1d910> - "@" - <hand_nfa_state.DFAState object at 0x7f9033c1d950>
+
+<hand_nfa_state.DFAState object at 0x7f9033c1df90> - decorator - <hand_nfa_state.DFAState object at 0x7f9033c1df90>
+<hand_nfa_state.DFAState object at 0x7f9033c1df50> - decorator - <hand_nfa_state.DFAState object at 0x7f9033c1df90>
+
+<hand_nfa_state.DFAState object at 0x7f9033c1d2d0> - decorators - <hand_nfa_state.DFAState object at 0x7f9033c1d290>
+
+<hand_nfa_state.DFAState object at 0x7f9033c1d650> - funcdef - <hand_nfa_state.DFAState object at 0x7f9033c1d350>
+<hand_nfa_state.DFAState object at 0x7f9033c1d610> - ASYNC - <hand_nfa_state.DFAState object at 0x7f9033c1d650>
+
+<hand_nfa_state.DFAState object at 0x7f9033c4de50> - parameters - <hand_nfa_state.DFAState object at 0x7f9033c4db50>
+<hand_nfa_state.DFAState object at 0x7f9033c4d910> - NAME - <hand_nfa_state.DFAState object at 0x7f9033c4de50>
+<hand_nfa_state.DFAState object at 0x7f9033c4d8d0> - "def" - <hand_nfa_state.DFAState object at 0x7f9033c4d910>
+
+<hand_nfa_state.DFAState object at 0x7f9033c50550> - "(" - <hand_nfa_state.DFAState object at 0x7f9033c50590>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033be8d50> - NAME - <hand_nfa_state.DFAState object at 0x7f9033be8d90>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c13410> - vfpdef - <hand_nfa_state.DFAState object at 0x7f9033c13450>
+
+<hand_nfa_state.DFAState object at 0x7f9033c13910> - NAME - <hand_nfa_state.DFAState object at 0x7f9033c13950>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c13ed0> - compound_stmt - <hand_nfa_state.DFAState object at 0x7f9033c13f10>
+<hand_nfa_state.DFAState object at 0x7f9033c13ed0> - simple_stmt - <hand_nfa_state.DFAState object at 0x7f9033b97090>
+
+<hand_nfa_state.DFAState object at 0x7f9033b97ad0> - small_stmt - <hand_nfa_state.DFAState object at 0x7f9033b97b10>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c13d90> - testlist_star_expr - <hand_nfa_state.DFAState object at 0x7f9033c13dd0>
+
+<hand_nfa_state.DFAState object at 0x7f9033b9e710> - test - <hand_nfa_state.DFAState object at 0x7f9033b9e890>
+<hand_nfa_state.DFAState object at 0x7f9033b9e6d0> - ":" - <hand_nfa_state.DFAState object at 0x7f9033b9e710>
+
+
+
+<hand_nfa_state.DFAState object at 0x7f9033b99f50> - exprlist - <hand_nfa_state.DFAState object at 0x7f9033ba4050>
+<hand_nfa_state.DFAState object at 0x7f9033b99f10> - "del" - <hand_nfa_state.DFAState object at 0x7f9033b99f50>
+
+<hand_nfa_state.DFAState object at 0x7f9033ba4510> - "pass" - <hand_nfa_state.DFAState object at 0x7f9033ba4550>
+
+
+
+
+
+<hand_nfa_state.DFAState object at 0x7f9033ba4d90> - break_stmt - <hand_nfa_state.DFAState object at 0x7f9033ba4dd0>
+<hand_nfa_state.DFAState object at 0x7f9033ba4d90> - return_stmt - <hand_nfa_state.DFAState object at 0x7f9033ba90d0>
+<hand_nfa_state.DFAState object at 0x7f9033ba4d90> - raise_stmt - <hand_nfa_state.DFAState object at 0x7f9033ba9110>
+<hand_nfa_state.DFAState object at 0x7f9033ba4d90> - yield_stmt - <hand_nfa_state.DFAState object at 0x7f9033ba9150>
+<hand_nfa_state.DFAState object at 0x7f9033ba4d90> - continue_stmt - <hand_nfa_state.DFAState object at 0x7f9033ba91d0>
+
+<hand_nfa_state.DFAState object at 0x7f9033ba9610> - "break" - <hand_nfa_state.DFAState object at 0x7f9033ba9650>
+
+<hand_nfa_state.DFAState object at 0x7f9033ba9b10> - "continue" - <hand_nfa_state.DFAState object at 0x7f9033ba9b50>
+
+<hand_nfa_state.DFAState object at 0x7f9033c133d0> - "return" - <hand_nfa_state.DFAState object at 0x7f9033c13310>
+
+<hand_nfa_state.DFAState object at 0x7f9033c13bd0> - yield_expr - <hand_nfa_state.DFAState object at 0x7f9033c13c90>
+
+<hand_nfa_state.DFAState object at 0x7f9033c05e90> - "raise" - <hand_nfa_state.DFAState object at 0x7f9033c05a10>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033ba2210> - import_name - <hand_nfa_state.DFAState object at 0x7f9033ba2250>
+<hand_nfa_state.DFAState object at 0x7f9033ba2210> - import_from - <hand_nfa_state.DFAState object at 0x7f9033ba2390>
+
+<hand_nfa_state.DFAState object at 0x7f9033ba2850> - dotted_as_names - <hand_nfa_state.DFAState object at 0x7f9033ba2910>
+<hand_nfa_state.DFAState object at 0x7f9033ba2810> - "import" - <hand_nfa_state.DFAState object at 0x7f9033ba2850>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033ba4e50> - NAME - <hand_nfa_state.DFAState object at 0x7f9033ba4e10>
+
+<hand_nfa_state.DFAState object at 0x7f9033ba4bd0> - dotted_name - <hand_nfa_state.DFAState object at 0x7f9033ba4c10>
+
+<hand_nfa_state.DFAState object at 0x7f9033b973d0> - import_as_name - <hand_nfa_state.DFAState object at 0x7f9033b97410>
+
+<hand_nfa_state.DFAState object at 0x7f9033b97bd0> - dotted_as_name - <hand_nfa_state.DFAState object at 0x7f9033b97c10>
+
+<hand_nfa_state.DFAState object at 0x7f9033b97c10> - NAME - <hand_nfa_state.DFAState object at 0x7f9033b97a50>
+
+<hand_nfa_state.DFAState object at 0x7f9033b97110> - NAME - <hand_nfa_state.DFAState object at 0x7f9033c13e90>
+<hand_nfa_state.DFAState object at 0x7f9033b97310> - "global" - <hand_nfa_state.DFAState object at 0x7f9033b97110>
+
+<hand_nfa_state.DFAState object at 0x7f9033c13050> - NAME - <hand_nfa_state.DFAState object at 0x7f9033c13890>
+<hand_nfa_state.DFAState object at 0x7f9033c13510> - "nonlocal" - <hand_nfa_state.DFAState object at 0x7f9033c13050>
+
+<hand_nfa_state.DFAState object at 0x7f9033c4d950> - test - <hand_nfa_state.DFAState object at 0x7f9033c4da50>
+<hand_nfa_state.DFAState object at 0x7f9033c4de50> - "assert" - <hand_nfa_state.DFAState object at 0x7f9033c4d950>
+
+
+
+
+
+
+
+
+
+<hand_nfa_state.DFAState object at 0x7f9033bad510> - funcdef - <hand_nfa_state.DFAState object at 0x7f9033bad550>
+<hand_nfa_state.DFAState object at 0x7f9033bad510> - if_stmt - <hand_nfa_state.DFAState object at 0x7f9033bada10>
+<hand_nfa_state.DFAState object at 0x7f9033bad510> - classdef - <hand_nfa_state.DFAState object at 0x7f9033bada50>
+<hand_nfa_state.DFAState object at 0x7f9033bad510> - with_stmt - <hand_nfa_state.DFAState object at 0x7f9033bada90>
+<hand_nfa_state.DFAState object at 0x7f9033bad510> - while_stmt - <hand_nfa_state.DFAState object at 0x7f9033badb10>
+<hand_nfa_state.DFAState object at 0x7f9033bad510> - decorated - <hand_nfa_state.DFAState object at 0x7f9033badb50>
+<hand_nfa_state.DFAState object at 0x7f9033bad510> - async_stmt - <hand_nfa_state.DFAState object at 0x7f9033badb90>
+<hand_nfa_state.DFAState object at 0x7f9033bad510> - for_stmt - <hand_nfa_state.DFAState object at 0x7f9033badbd0>
+<hand_nfa_state.DFAState object at 0x7f9033bad510> - try_stmt - <hand_nfa_state.DFAState object at 0x7f9033badad0>
+
+<hand_nfa_state.DFAState object at 0x7f9033c9a210> - ASYNC - <hand_nfa_state.DFAState object at 0x7f9033c9a250>
+
+<hand_nfa_state.DFAState object at 0x7f9033d12390> - suite - <hand_nfa_state.DFAState object at 0x7f9033d12450>
+<hand_nfa_state.DFAState object at 0x7f9033d122d0> - ":" - <hand_nfa_state.DFAState object at 0x7f9033d12390>
+<hand_nfa_state.DFAState object at 0x7f9033d12210> - namedexpr_test - <hand_nfa_state.DFAState object at 0x7f9033d122d0>
+<hand_nfa_state.DFAState object at 0x7f9033d121d0> - "if" - <hand_nfa_state.DFAState object at 0x7f9033d12210>
+
+<hand_nfa_state.DFAState object at 0x7f9033d12e50> - suite - <hand_nfa_state.DFAState object at 0x7f9033c9ac50>
+<hand_nfa_state.DFAState object at 0x7f9033d12d90> - ":" - <hand_nfa_state.DFAState object at 0x7f9033d12e50>
+<hand_nfa_state.DFAState object at 0x7f9033d12cd0> - namedexpr_test - <hand_nfa_state.DFAState object at 0x7f9033d12d90>
+<hand_nfa_state.DFAState object at 0x7f9033d12c90> - "while" - <hand_nfa_state.DFAState object at 0x7f9033d12cd0>
+
+<hand_nfa_state.DFAState object at 0x7f9033c9a310> - ":" - <hand_nfa_state.DFAState object at 0x7f9033c9a110>
+<hand_nfa_state.DFAState object at 0x7f9033c9aa50> - testlist - <hand_nfa_state.DFAState object at 0x7f9033c9a310>
+<hand_nfa_state.DFAState object at 0x7f9033c9a990> - "in" - <hand_nfa_state.DFAState object at 0x7f9033c9aa50>
+<hand_nfa_state.DFAState object at 0x7f9033c9a610> - exprlist - <hand_nfa_state.DFAState object at 0x7f9033c9a990>
+<hand_nfa_state.DFAState object at 0x7f9033c9a890> - "for" - <hand_nfa_state.DFAState object at 0x7f9033c9a610>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033b97650> - with_item - <hand_nfa_state.DFAState object at 0x7f9033b97b10>
+<hand_nfa_state.DFAState object at 0x7f9033b977d0> - "with" - <hand_nfa_state.DFAState object at 0x7f9033b97650>
+
+<hand_nfa_state.DFAState object at 0x7f9033d12e10> - test - <hand_nfa_state.DFAState object at 0x7f9033d12dd0>
+
+<hand_nfa_state.DFAState object at 0x7f9033d12090> - "except" - <hand_nfa_state.DFAState object at 0x7f9033d120d0>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c6c790> - simple_stmt - <hand_nfa_state.DFAState object at 0x7f9033c6c7d0>
+<hand_nfa_state.DFAState object at 0x7f9033c6ca10> - DEDENT - <hand_nfa_state.DFAState object at 0x7f9033c6cb10>
+<hand_nfa_state.DFAState object at 0x7f9033c6ca10> - stmt - <hand_nfa_state.DFAState object at 0x7f9033c6ca10>
+<hand_nfa_state.DFAState object at 0x7f9033c6c950> - stmt - <hand_nfa_state.DFAState object at 0x7f9033c6ca10>
+<hand_nfa_state.DFAState object at 0x7f9033c6c910> - INDENT - <hand_nfa_state.DFAState object at 0x7f9033c6c950>
+<hand_nfa_state.DFAState object at 0x7f9033c6c790> - NEWLINE - <hand_nfa_state.DFAState object at 0x7f9033c6c910>
+
+<hand_nfa_state.DFAState object at 0x7f9033c581d0> - test - <hand_nfa_state.DFAState object at 0x7f9033c58210>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c6c9d0> - or_test - <hand_nfa_state.DFAState object at 0x7f9033c6c990>
+<hand_nfa_state.DFAState object at 0x7f9033c6c9d0> - lambdef - <hand_nfa_state.DFAState object at 0x7f9033c6c510>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c6c410> - or_test - <hand_nfa_state.DFAState object at 0x7f9033c6c550>
+<hand_nfa_state.DFAState object at 0x7f9033c6c410> - lambdef_nocond - <hand_nfa_state.DFAState object at 0x7f9033c6c350>
+
+<hand_nfa_state.DFAState object at 0x7f9033d12410> - "lambda" - <hand_nfa_state.DFAState object at 0x7f9033d124d0>
+
+<hand_nfa_state.DFAState object at 0x7f9033b97c90> - "lambda" - <hand_nfa_state.DFAState object at 0x7f9033b97990>
+
+<hand_nfa_state.DFAState object at 0x7f9033b97910> - and_test - <hand_nfa_state.DFAState object at 0x7f9033b97390>
+
+<hand_nfa_state.DFAState object at 0x7f9033c4db90> - not_test - <hand_nfa_state.DFAState object at 0x7f9033c4da90>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033bada10> - comparison - <hand_nfa_state.DFAState object at 0x7f9033bad550>
+<hand_nfa_state.DFAState object at 0x7f9033badb10> - not_test - <hand_nfa_state.DFAState object at 0x7f9033bad310>
+<hand_nfa_state.DFAState object at 0x7f9033bada10> - "not" - <hand_nfa_state.DFAState object at 0x7f9033badb10>
+
+<hand_nfa_state.DFAState object at 0x7f9033bad990> - expr - <hand_nfa_state.DFAState object at 0x7f9033bad950>
+
+
+
+
+
+
+
+
+
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - ">=" - <hand_nfa_state.DFAState object at 0x7f9033c9a510>
+<hand_nfa_state.DFAState object at 0x7f9033c365d0> - "not" - <hand_nfa_state.DFAState object at 0x7f9033c36b90>
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - "is" - <hand_nfa_state.DFAState object at 0x7f9033c365d0>
+<hand_nfa_state.DFAState object at 0x7f9033c367d0> - "in" - <hand_nfa_state.DFAState object at 0x7f9033c36850>
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - "not" - <hand_nfa_state.DFAState object at 0x7f9033c367d0>
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - "==" - <hand_nfa_state.DFAState object at 0x7f9033c36890>
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - "<=" - <hand_nfa_state.DFAState object at 0x7f9033c368d0>
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - "!=" - <hand_nfa_state.DFAState object at 0x7f9033c36910>
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - "<>" - <hand_nfa_state.DFAState object at 0x7f9033c36810>
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - "in" - <hand_nfa_state.DFAState object at 0x7f9033c369d0>
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - ">" - <hand_nfa_state.DFAState object at 0x7f9033c36ad0>
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - "<" - <hand_nfa_state.DFAState object at 0x7f9033c36b10>
+
+<hand_nfa_state.DFAState object at 0x7f9033c36190> - expr - <hand_nfa_state.DFAState object at 0x7f9033c9a0d0>
+<hand_nfa_state.DFAState object at 0x7f9033c36f90> - "*" - <hand_nfa_state.DFAState object at 0x7f9033c36190>
+
+<hand_nfa_state.DFAState object at 0x7f9033c9a150> - xor_expr - <hand_nfa_state.DFAState object at 0x7f9033c9a390>
+
+<hand_nfa_state.DFAState object at 0x7f9033bad1d0> - and_expr - <hand_nfa_state.DFAState object at 0x7f9033bad850>
+
+<hand_nfa_state.DFAState object at 0x7f9033bad790> - shift_expr - <hand_nfa_state.DFAState object at 0x7f9033bad410>
+
+<hand_nfa_state.DFAState object at 0x7f9033c4d990> - arith_expr - <hand_nfa_state.DFAState object at 0x7f9033c4db90>
+
+<hand_nfa_state.DFAState object at 0x7f9033b97190> - term - <hand_nfa_state.DFAState object at 0x7f9033b978d0>
+
+<hand_nfa_state.DFAState object at 0x7f9033d12a90> - factor - <hand_nfa_state.DFAState object at 0x7f9033d12210>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c36c90> - power - <hand_nfa_state.DFAState object at 0x7f9033c36e90>
+
+<hand_nfa_state.DFAState object at 0x7f9033c364d0> - atom_expr - <hand_nfa_state.DFAState object at 0x7f9033c36510>
+
+
+
+
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c4dc10> - "]" - <hand_nfa_state.DFAState object at 0x7f9033c4dcd0>
+<hand_nfa_state.DFAState object at 0x7f9033c4db10> - subscriptlist - <hand_nfa_state.DFAState object at 0x7f9033c4dc10>
+<hand_nfa_state.DFAState object at 0x7f9033c4dd50> - "[" - <hand_nfa_state.DFAState object at 0x7f9033c4db10>
+<hand_nfa_state.DFAState object at 0x7f9033c4da50> - NAME - <hand_nfa_state.DFAState object at 0x7f9033c4de50>
+<hand_nfa_state.DFAState object at 0x7f9033c4dd50> - "." - <hand_nfa_state.DFAState object at 0x7f9033c4da50>
+<hand_nfa_state.DFAState object at 0x7f9033c4dd50> - "(" - <hand_nfa_state.DFAState object at 0x7f9033c4d990>
+
+<hand_nfa_state.DFAState object at 0x7f9033bad350> - subscript - <hand_nfa_state.DFAState object at 0x7f9033badf10>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033bad850> - test - <hand_nfa_state.DFAState object at 0x7f9033bad810>
+
+<hand_nfa_state.DFAState object at 0x7f9033c9a790> - ":" - <hand_nfa_state.DFAState object at 0x7f9033c9af10>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c9a450> - test - <hand_nfa_state.DFAState object at 0x7f9033c9a490>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033b97090> - NAME - <hand_nfa_state.DFAState object at 0x7f9033b97310>
+<hand_nfa_state.DFAState object at 0x7f9033b976d0> - "class" - <hand_nfa_state.DFAState object at 0x7f9033b97090>
+
+<hand_nfa_state.DFAState object at 0x7f9033d12350> - argument - <hand_nfa_state.DFAState object at 0x7f9033d12290>
+
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c36f10> - comp_for - <hand_nfa_state.DFAState object at 0x7f9033c360d0>
+<hand_nfa_state.DFAState object at 0x7f9033c36f10> - comp_if - <hand_nfa_state.DFAState object at 0x7f9033c36b10>
+
+<hand_nfa_state.DFAState object at 0x7f9033c36650> - or_test - <hand_nfa_state.DFAState object at 0x7f9033c36210>
+<hand_nfa_state.DFAState object at 0x7f9033c36810> - "in" - <hand_nfa_state.DFAState object at 0x7f9033c36650>
+<hand_nfa_state.DFAState object at 0x7f9033c369d0> - exprlist - <hand_nfa_state.DFAState object at 0x7f9033c36810>
+<hand_nfa_state.DFAState object at 0x7f9033c55190> - "for" - <hand_nfa_state.DFAState object at 0x7f9033c369d0>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033d12110> - test_nocond - <hand_nfa_state.DFAState object at 0x7f9033d12150>
+<hand_nfa_state.DFAState object at 0x7f9033d12fd0> - "if" - <hand_nfa_state.DFAState object at 0x7f9033d12110>
+
+<hand_nfa_state.DFAState object at 0x7f9033d12210> - NAME - <hand_nfa_state.DFAState object at 0x7f9033d12350>
+
+<hand_nfa_state.DFAState object at 0x7f9033b97690> - "yield" - <hand_nfa_state.DFAState object at 0x7f9033b97290>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033b975d0> - testlist_star_expr - <hand_nfa_state.DFAState object at 0x7f9033b97410>
+<hand_nfa_state.DFAState object at 0x7f9033b97910> - test - <hand_nfa_state.DFAState object at 0x7f9033b97210>
+<hand_nfa_state.DFAState object at 0x7f9033b975d0> - "from" - <hand_nfa_state.DFAState object at 0x7f9033b97910>
+
+
+<hand_nfa_state.DFAState object at 0x7f9033c4d9d0> - simple_stmt - <hand_nfa_state.DFAState object at 0x7f9033c4dd90>
+<hand_nfa_state.DFAState object at 0x7f9033c4d9d0> - NEWLINE - <hand_nfa_state.DFAState object at 0x7f9033bad190>
+
+<hand_nfa_state.DFAState object at 0x7f9033bad110> - NEWLINE - <hand_nfa_state.DFAState object at 0x7f9033bad110>
+<hand_nfa_state.DFAState object at 0x7f9033badc50> - NEWLINE - <hand_nfa_state.DFAState object at 0x7f9033bad110>
+<hand_nfa_state.DFAState object at 0x7f9033bad990> - func_type - <hand_nfa_state.DFAState object at 0x7f9033badc50>
+
+<hand_nfa_state.DFAState object at 0x7f9033c9a4d0> - "(" - <hand_nfa_state.DFAState object at 0x7f9033c9afd0>
+

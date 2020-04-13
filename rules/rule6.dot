@@ -1,0 +1,8 @@
+
+digraph async_funcdef {
+  0->1[label=epsilon]
+  1->2[label=ASYNC]
+  2->3[label=epsilon]
+  3->4[label=funcdef]
+  4->5[label=epsilon]
+}

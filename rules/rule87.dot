@@ -1,0 +1,12 @@
+
+
+digraph yield_arg {
+  0->1[label=epsilon]
+  1->2[label="from"]
+  2->3[label=epsilon]
+  3->4[label=test]
+  4->5[label=epsilon]
+  0->6[label=epsilon]
+  6->7[label=testlist_star_expr]
+  7->5[label=epsilon]
+}

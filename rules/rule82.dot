@@ -1,0 +1,17 @@
+
+digraph sync_comp_for {
+  0->1[label=epsilon]
+  1->2[label="for"]
+  2->3[label=epsilon]
+  3->4[label=exprlist]
+  4->5[label=epsilon]
+  5->6[label="in"]
+  6->7[label=epsilon]
+  7->8[label=or_test]
+  8->9[label=epsilon]
+  9->10[label=epsilon]
+  10->11[label=comp_iter]
+  11->12[label=epsilon]
+  12->13[label=epsilon]
+  9->12[label=epsilon]
+}

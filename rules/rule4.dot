@@ -1,0 +1,7 @@
+
+digraph decorators {
+  0->1[label=epsilon]
+  1->2[label=decorator]
+  2->1[label=epsilon]
+  2->3[label=epsilon]
+}

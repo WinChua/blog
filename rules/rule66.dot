@@ -1,0 +1,20 @@
+
+
+digraph factor {
+  0->1[label=epsilon]
+  1->2[label=epsilon]
+  2->3[label="+"]
+  3->4[label=epsilon]
+  4->5[label=epsilon]
+  5->6[label=factor]
+  6->7[label=epsilon]
+  1->8[label=epsilon]
+  8->9[label="-"]
+  9->4[label=epsilon]
+  1->10[label=epsilon]
+  10->11[label="~"]
+  11->4[label=epsilon]
+  0->12[label=epsilon]
+  12->13[label=power]
+  13->7[label=epsilon]
+}

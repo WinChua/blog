@@ -1,0 +1,6 @@
+
+digraph yield_stmt {
+  0->1[label=epsilon]
+  1->2[label=yield_expr]
+  2->3[label=epsilon]
+}

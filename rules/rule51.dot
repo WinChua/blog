@@ -1,0 +1,10 @@
+
+
+digraph test_nocond {
+  0->1[label=epsilon]
+  1->2[label=or_test]
+  2->3[label=epsilon]
+  0->4[label=epsilon]
+  4->5[label=lambdef_nocond]
+  5->3[label=epsilon]
+}

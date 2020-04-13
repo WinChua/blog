@@ -1,0 +1,11 @@
+
+digraph return_stmt {
+  0->1[label=epsilon]
+  1->2[label="return"]
+  2->3[label=epsilon]
+  3->4[label=epsilon]
+  4->5[label=testlist_star_expr]
+  5->6[label=epsilon]
+  6->7[label=epsilon]
+  3->6[label=epsilon]
+}

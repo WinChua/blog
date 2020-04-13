@@ -1,0 +1,14 @@
+
+digraph file_input {
+  0->1[label=epsilon]
+  1->2[label=epsilon]
+  2->3[label=NEWLINE]
+  3->4[label=epsilon]
+  4->1[label=epsilon]
+  1->5[label=epsilon]
+  5->6[label=stmt]
+  6->4[label=epsilon]
+  1->7[label=epsilon]
+  7->8[label=ENDMARKER]
+  8->9[label=epsilon]
+}

@@ -1,0 +1,11 @@
+
+digraph comp_for {
+  0->1[label=epsilon]
+  1->2[label=epsilon]
+  2->3[label=ASYNC]
+  3->4[label=epsilon]
+  4->5[label=epsilon]
+  5->6[label=sync_comp_for]
+  6->7[label=epsilon]
+  1->4[label=epsilon]
+}

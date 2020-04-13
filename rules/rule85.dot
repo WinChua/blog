@@ -1,0 +1,6 @@
+
+digraph encoding_decl {
+  0->1[label=epsilon]
+  1->2[label=NAME]
+  2->3[label=epsilon]
+}

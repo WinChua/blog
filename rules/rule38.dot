@@ -1,0 +1,15 @@
+
+digraph assert_stmt {
+  0->1[label=epsilon]
+  1->2[label="assert"]
+  2->3[label=epsilon]
+  3->4[label=test]
+  4->5[label=epsilon]
+  5->6[label=epsilon]
+  6->7[label=","]
+  7->8[label=epsilon]
+  8->9[label=test]
+  9->10[label=epsilon]
+  10->11[label=epsilon]
+  5->10[label=epsilon]
+}

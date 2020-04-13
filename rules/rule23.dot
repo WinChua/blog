@@ -1,0 +1,6 @@
+
+digraph break_stmt {
+  0->1[label=epsilon]
+  1->2[label="break"]
+  2->3[label=epsilon]
+}

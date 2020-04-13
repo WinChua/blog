@@ -1,0 +1,16 @@
+
+digraph decorated {
+  0->1[label=epsilon]
+  1->2[label=decorators]
+  2->3[label=epsilon]
+  3->4[label=epsilon]
+  4->5[label=classdef]
+  5->6[label=epsilon]
+  6->7[label=epsilon]
+  3->8[label=epsilon]
+  8->9[label=funcdef]
+  9->6[label=epsilon]
+  3->10[label=epsilon]
+  10->11[label=async_funcdef]
+  11->6[label=epsilon]
+}

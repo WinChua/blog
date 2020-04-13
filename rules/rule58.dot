@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+
+
+
+digraph comp_op {
+  0->1[label=epsilon]
+  1->2[label="<"]
+  2->3[label=epsilon]
+  0->4[label=epsilon]
+  4->5[label=">"]
+  5->3[label=epsilon]
+  0->6[label=epsilon]
+  6->7[label="=="]
+  7->3[label=epsilon]
+  0->8[label=epsilon]
+  8->9[label=">="]
+  9->3[label=epsilon]
+  0->10[label=epsilon]
+  10->11[label="<="]
+  11->3[label=epsilon]
+  0->12[label=epsilon]
+  12->13[label="<>"]
+  13->3[label=epsilon]
+  0->14[label=epsilon]
+  14->15[label="!="]
+  15->3[label=epsilon]
+  0->16[label=epsilon]
+  16->17[label="in"]
+  17->3[label=epsilon]
+  0->18[label=epsilon]
+  18->19[label="not"]
+  19->20[label=epsilon]
+  20->21[label="in"]
+  21->3[label=epsilon]
+  0->22[label=epsilon]
+  22->23[label="is"]
+  23->3[label=epsilon]
+  0->24[label=epsilon]
+  24->25[label="is"]
+  25->26[label=epsilon]
+  26->27[label="not"]
+  27->3[label=epsilon]
+}

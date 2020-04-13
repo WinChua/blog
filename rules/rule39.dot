@@ -1,0 +1,38 @@
+
+
+
+
+
+
+
+
+
+digraph compound_stmt {
+  0->1[label=epsilon]
+  1->2[label=if_stmt]
+  2->3[label=epsilon]
+  0->4[label=epsilon]
+  4->5[label=while_stmt]
+  5->3[label=epsilon]
+  0->6[label=epsilon]
+  6->7[label=for_stmt]
+  7->3[label=epsilon]
+  0->8[label=epsilon]
+  8->9[label=try_stmt]
+  9->3[label=epsilon]
+  0->10[label=epsilon]
+  10->11[label=with_stmt]
+  11->3[label=epsilon]
+  0->12[label=epsilon]
+  12->13[label=funcdef]
+  13->3[label=epsilon]
+  0->14[label=epsilon]
+  14->15[label=classdef]
+  15->3[label=epsilon]
+  0->16[label=epsilon]
+  16->17[label=decorated]
+  17->3[label=epsilon]
+  0->18[label=epsilon]
+  18->19[label=async_stmt]
+  19->3[label=epsilon]
+}

@@ -1,0 +1,24 @@
+
+
+digraph func_body_suite {
+  0->1[label=epsilon]
+  1->2[label=simple_stmt]
+  2->3[label=epsilon]
+  0->4[label=epsilon]
+  4->5[label=NEWLINE]
+  5->6[label=epsilon]
+  6->7[label=epsilon]
+  7->8[label=TYPE_COMMENT]
+  8->9[label=epsilon]
+  9->10[label=NEWLINE]
+  10->11[label=epsilon]
+  11->12[label=epsilon]
+  12->13[label=INDENT]
+  13->14[label=epsilon]
+  14->15[label=stmt]
+  15->14[label=epsilon]
+  15->16[label=epsilon]
+  16->17[label=DEDENT]
+  17->3[label=epsilon]
+  6->11[label=epsilon]
+}

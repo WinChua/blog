@@ -1,0 +1,25 @@
+
+
+digraph subscript {
+  0->1[label=epsilon]
+  1->2[label=test]
+  2->3[label=epsilon]
+  0->4[label=epsilon]
+  4->5[label=epsilon]
+  5->6[label=test]
+  6->7[label=epsilon]
+  7->8[label=epsilon]
+  8->9[label=":"]
+  9->10[label=epsilon]
+  10->11[label=epsilon]
+  11->12[label=test]
+  12->13[label=epsilon]
+  13->14[label=epsilon]
+  14->15[label=epsilon]
+  15->16[label=sliceop]
+  16->17[label=epsilon]
+  17->3[label=epsilon]
+  14->17[label=epsilon]
+  10->13[label=epsilon]
+  4->7[label=epsilon]
+}

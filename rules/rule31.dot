@@ -1,0 +1,13 @@
+
+digraph import_as_name {
+  0->1[label=epsilon]
+  1->2[label=NAME]
+  2->3[label=epsilon]
+  3->4[label=epsilon]
+  4->5[label="as"]
+  5->6[label=epsilon]
+  6->7[label=NAME]
+  7->8[label=epsilon]
+  8->9[label=epsilon]
+  3->8[label=epsilon]
+}

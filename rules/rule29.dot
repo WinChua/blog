@@ -1,0 +1,8 @@
+
+digraph import_name {
+  0->1[label=epsilon]
+  1->2[label="import"]
+  2->3[label=epsilon]
+  3->4[label=dotted_as_names]
+  4->5[label=epsilon]
+}

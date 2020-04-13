@@ -1,0 +1,8 @@
+
+digraph del_stmt {
+  0->1[label=epsilon]
+  1->2[label="del"]
+  2->3[label=epsilon]
+  3->4[label=exprlist]
+  4->5[label=epsilon]
+}
