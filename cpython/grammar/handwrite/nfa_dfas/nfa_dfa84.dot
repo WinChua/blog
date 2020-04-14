@@ -1,0 +1,19 @@
+digraph comp_if {
+ subgraph comp_if_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label="if"]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_3->nfa_4[label=test_nocond]
+  nfa_4->nfa_5[label=epsilon]
+  nfa_5->nfa_6[label=epsilon]
+  nfa_6->nfa_7[label=comp_iter]
+  nfa_7->nfa_8[label=epsilon]
+  nfa_8->nfa_9[label=epsilon]
+  nfa_5->nfa_8[label=epsilon]
+  }
+ subgraph comp_if_dfa {
+  dfa_0->dfa_1[label="if"]
+  dfa_1->dfa_2[label=test_nocond,color=red]
+  dfa_2->dfa_3[label=comp_iter,color=red]
+  }
+}

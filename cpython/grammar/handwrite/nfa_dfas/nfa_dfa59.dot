@@ -1,0 +1,13 @@
+digraph star_expr {
+ subgraph star_expr_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label="*"]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_3->nfa_4[label=expr]
+  nfa_4->nfa_5[label=epsilon]
+  }
+ subgraph star_expr_dfa {
+  dfa_0->dfa_1[label="*"]
+  dfa_1->dfa_2[label=expr,color=red]
+  }
+}

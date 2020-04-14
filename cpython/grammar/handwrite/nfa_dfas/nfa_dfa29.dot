@@ -1,0 +1,13 @@
+digraph import_name {
+ subgraph import_name_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label="import"]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_3->nfa_4[label=dotted_as_names]
+  nfa_4->nfa_5[label=epsilon]
+  }
+ subgraph import_name_dfa {
+  dfa_0->dfa_1[label="import"]
+  dfa_1->dfa_2[label=dotted_as_names,color=red]
+  }
+}

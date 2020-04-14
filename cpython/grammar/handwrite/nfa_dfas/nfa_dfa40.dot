@@ -1,0 +1,23 @@
+digraph async_stmt {
+ subgraph async_stmt_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label=ASYNC]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_3->nfa_4[label=epsilon]
+  nfa_4->nfa_5[label=funcdef]
+  nfa_5->nfa_6[label=epsilon]
+  nfa_6->nfa_7[label=epsilon]
+  nfa_3->nfa_8[label=epsilon]
+  nfa_8->nfa_9[label=with_stmt]
+  nfa_9->nfa_6[label=epsilon]
+  nfa_3->nfa_10[label=epsilon]
+  nfa_10->nfa_11[label=for_stmt]
+  nfa_11->nfa_6[label=epsilon]
+  }
+ subgraph async_stmt_dfa {
+  dfa_0->dfa_1[label=ASYNC]
+  dfa_1->dfa_2[label=for_stmt,color=red]
+  dfa_1->dfa_3[label=funcdef,color=red]
+  dfa_1->dfa_4[label=with_stmt,color=red]
+  }
+}

@@ -1,0 +1,21 @@
+digraph single_input {
+ subgraph single_input_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label=NEWLINE]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_0->nfa_4[label=epsilon]
+  nfa_4->nfa_5[label=simple_stmt]
+  nfa_5->nfa_3[label=epsilon]
+  nfa_0->nfa_6[label=epsilon]
+  nfa_6->nfa_7[label=compound_stmt]
+  nfa_7->nfa_8[label=epsilon]
+  nfa_8->nfa_9[label=NEWLINE]
+  nfa_9->nfa_3[label=epsilon]
+  }
+ subgraph single_input_dfa {
+  dfa_0->dfa_1[label=simple_stmt,color=red]
+  dfa_0->dfa_2[label=compound_stmt]
+  dfa_2->dfa_3[label=NEWLINE,color=red]
+  dfa_0->dfa_4[label=NEWLINE,color=red]
+  }
+}

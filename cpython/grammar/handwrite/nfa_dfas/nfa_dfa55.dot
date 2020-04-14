@@ -1,0 +1,20 @@
+digraph and_test {
+ subgraph and_test_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label=not_test]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_3->nfa_4[label=epsilon]
+  nfa_4->nfa_5[label="and"]
+  nfa_5->nfa_6[label=epsilon]
+  nfa_6->nfa_7[label=not_test]
+  nfa_7->nfa_8[label=epsilon]
+  nfa_8->nfa_3[label=epsilon]
+  nfa_3->nfa_9[label=epsilon]
+  }
+ subgraph and_test_dfa {
+  dfa_0->dfa_1[label=not_test,color=red]
+  dfa_1->dfa_2[label="and"]
+  dfa_2->dfa_3[label=not_test,color=red]
+  dfa_3->dfa_2[label="and"]
+  }
+}

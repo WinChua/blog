@@ -1,0 +1,22 @@
+digraph atom_expr {
+ subgraph atom_expr_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label=epsilon]
+  nfa_2->nfa_3[label=AWAIT]
+  nfa_3->nfa_4[label=epsilon]
+  nfa_4->nfa_5[label=epsilon]
+  nfa_5->nfa_6[label=atom]
+  nfa_6->nfa_7[label=epsilon]
+  nfa_7->nfa_8[label=trailer]
+  nfa_8->nfa_7[label=epsilon]
+  nfa_7->nfa_9[label=epsilon]
+  nfa_1->nfa_4[label=epsilon]
+  }
+ subgraph atom_expr_dfa {
+  dfa_0->dfa_1[label=AWAIT]
+  dfa_1->dfa_2[label=atom,color=red]
+  dfa_2->dfa_3[label=trailer,color=red]
+  dfa_3->dfa_3[label=trailer,color=red]
+  dfa_0->dfa_2[label=atom,color=red]
+  }
+}

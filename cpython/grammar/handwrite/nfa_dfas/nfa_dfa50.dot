@@ -1,0 +1,29 @@
+digraph test {
+ subgraph test_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label=or_test]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_3->nfa_4[label=epsilon]
+  nfa_4->nfa_5[label="if"]
+  nfa_5->nfa_6[label=epsilon]
+  nfa_6->nfa_7[label=or_test]
+  nfa_7->nfa_8[label=epsilon]
+  nfa_8->nfa_9[label="else"]
+  nfa_9->nfa_10[label=epsilon]
+  nfa_10->nfa_11[label=test]
+  nfa_11->nfa_12[label=epsilon]
+  nfa_12->nfa_13[label=epsilon]
+  nfa_3->nfa_12[label=epsilon]
+  nfa_0->nfa_14[label=epsilon]
+  nfa_14->nfa_15[label=lambdef]
+  nfa_15->nfa_13[label=epsilon]
+  }
+ subgraph test_dfa {
+  dfa_0->dfa_1[label=lambdef,color=red]
+  dfa_0->dfa_2[label=or_test,color=red]
+  dfa_2->dfa_3[label="if"]
+  dfa_3->dfa_4[label=or_test]
+  dfa_4->dfa_5[label="else"]
+  dfa_5->dfa_6[label=test,color=red]
+  }
+}

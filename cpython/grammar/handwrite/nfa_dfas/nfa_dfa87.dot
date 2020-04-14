@@ -1,0 +1,17 @@
+digraph yield_arg {
+ subgraph yield_arg_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label="from"]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_3->nfa_4[label=test]
+  nfa_4->nfa_5[label=epsilon]
+  nfa_0->nfa_6[label=epsilon]
+  nfa_6->nfa_7[label=testlist_star_expr]
+  nfa_7->nfa_5[label=epsilon]
+  }
+ subgraph yield_arg_dfa {
+  dfa_0->dfa_1[label=testlist_star_expr,color=red]
+  dfa_0->dfa_2[label="from"]
+  dfa_2->dfa_3[label=test,color=red]
+  }
+}

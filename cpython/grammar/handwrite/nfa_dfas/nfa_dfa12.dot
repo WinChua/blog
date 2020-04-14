@@ -1,0 +1,10 @@
+digraph vfpdef {
+ subgraph vfpdef_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label=NAME]
+  nfa_2->nfa_3[label=epsilon]
+  }
+ subgraph vfpdef_dfa {
+  dfa_0->dfa_1[label=NAME,color=red]
+  }
+}

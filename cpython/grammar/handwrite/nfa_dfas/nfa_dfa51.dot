@@ -1,0 +1,14 @@
+digraph test_nocond {
+ subgraph test_nocond_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label=or_test]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_0->nfa_4[label=epsilon]
+  nfa_4->nfa_5[label=lambdef_nocond]
+  nfa_5->nfa_3[label=epsilon]
+  }
+ subgraph test_nocond_dfa {
+  dfa_0->dfa_1[label=or_test,color=red]
+  dfa_0->dfa_2[label=lambdef_nocond,color=red]
+  }
+}

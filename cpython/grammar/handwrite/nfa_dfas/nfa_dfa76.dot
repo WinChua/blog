@@ -1,0 +1,25 @@
+digraph testlist {
+ subgraph testlist_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label=test]
+  nfa_2->nfa_3[label=epsilon]
+  nfa_3->nfa_4[label=epsilon]
+  nfa_4->nfa_5[label=","]
+  nfa_5->nfa_6[label=epsilon]
+  nfa_6->nfa_7[label=test]
+  nfa_7->nfa_8[label=epsilon]
+  nfa_8->nfa_3[label=epsilon]
+  nfa_3->nfa_9[label=epsilon]
+  nfa_9->nfa_10[label=epsilon]
+  nfa_10->nfa_11[label=","]
+  nfa_11->nfa_12[label=epsilon]
+  nfa_12->nfa_13[label=epsilon]
+  nfa_9->nfa_12[label=epsilon]
+  }
+ subgraph testlist_dfa {
+  dfa_0->dfa_1[label=test,color=red]
+  dfa_1->dfa_2[label=",",color=red]
+  dfa_2->dfa_3[label=test,color=red]
+  dfa_3->dfa_2[label=",",color=red]
+  }
+}

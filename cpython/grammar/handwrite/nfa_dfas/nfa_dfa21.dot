@@ -1,0 +1,10 @@
+digraph pass_stmt {
+ subgraph pass_stmt_nfa {
+  nfa_0->nfa_1[label=epsilon]
+  nfa_1->nfa_2[label="pass"]
+  nfa_2->nfa_3[label=epsilon]
+  }
+ subgraph pass_stmt_dfa {
+  dfa_0->dfa_1[label="pass",color=red]
+  }
+}
