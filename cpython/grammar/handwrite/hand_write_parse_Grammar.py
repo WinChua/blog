@@ -5,7 +5,7 @@ import callback
 from hand_dot_draw import gen_dot
 import hand_dot_draw
 
-gram_file = "/home/winchua/cpython/Grammar/Grammar"
+gram_file = "Grammar"
 
 tokens = tokenize.generate_tokens(open(gram_file).readline)
 
