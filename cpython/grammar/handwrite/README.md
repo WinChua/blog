@@ -14,6 +14,6 @@ exprlist: (expr|star_expr) (',' (expr|star_expr))* [',']
 
 it generate the picture like this.
 
-[!exprlist](https://github.com/WinChua/blog/blob/master/cpython/grammar/handwrite/nfa_dfas/nfa_dfa75.dot.png)
+![exprlist](https://github.com/WinChua/blog/blob/master/cpython/grammar/handwrite/nfa_dfas/nfa_dfa75.dot.png)
 
 the red edge specify that whose end node is the final state of the dfa.
