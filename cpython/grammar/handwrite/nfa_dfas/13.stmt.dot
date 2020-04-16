@@ -1,0 +1,17 @@
+digraph stmt {
+ graph[label="stmt:simple_stmt | compound_stmt"]
+ subgraph stmt_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="simple_stmt"]
+  nfa_2->nfa_3[label="epsilon"]
+  nfa_0->nfa_4[label="epsilon"]
+  nfa_4->nfa_5[label="compound_stmt"]
+  nfa_5->nfa_3[label="epsilon"]
+  }
+ subgraph stmt_dfa {
+  dfa_0->dfa_1[label="compound_stmt",color=red]
+  dfa_0->dfa_2[label="simple_stmt",color=red]
+  dfa_1[color=red]
+  dfa_2[color=red]
+  }
+}

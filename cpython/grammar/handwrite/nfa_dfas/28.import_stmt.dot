@@ -1,0 +1,17 @@
+digraph import_stmt {
+ graph[label="import_stmt:import_name | import_from"]
+ subgraph import_stmt_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="import_name"]
+  nfa_2->nfa_3[label="epsilon"]
+  nfa_0->nfa_4[label="epsilon"]
+  nfa_4->nfa_5[label="import_from"]
+  nfa_5->nfa_3[label="epsilon"]
+  }
+ subgraph import_stmt_dfa {
+  dfa_0->dfa_1[label="import_from",color=red]
+  dfa_0->dfa_2[label="import_name",color=red]
+  dfa_1[color=red]
+  dfa_2[color=red]
+  }
+}

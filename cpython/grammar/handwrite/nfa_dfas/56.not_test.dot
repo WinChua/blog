@@ -1,0 +1,20 @@
+digraph not_test {
+ graph[label="not_test:'not' not_test | comparison"]
+ subgraph not_test_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="'not'"]
+  nfa_2->nfa_3[label="epsilon"]
+  nfa_3->nfa_4[label="not_test"]
+  nfa_4->nfa_5[label="epsilon"]
+  nfa_0->nfa_6[label="epsilon"]
+  nfa_6->nfa_7[label="comparison"]
+  nfa_7->nfa_5[label="epsilon"]
+  }
+ subgraph not_test_dfa {
+  dfa_0->dfa_1[label="'not'"]
+  dfa_1->dfa_2[label="not_test",color=red]
+  dfa_0->dfa_3[label="comparison",color=red]
+  dfa_2[color=red]
+  dfa_3[color=red]
+  }
+}

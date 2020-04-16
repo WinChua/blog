@@ -1,0 +1,12 @@
+digraph yield_stmt {
+ graph[label="yield_stmt:yield_expr"]
+ subgraph yield_stmt_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="yield_expr"]
+  nfa_2->nfa_3[label="epsilon"]
+  }
+ subgraph yield_stmt_dfa {
+  dfa_0->dfa_1[label="yield_expr",color=red]
+  dfa_1[color=red]
+  }
+}

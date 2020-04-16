@@ -1,0 +1,14 @@
+digraph decorators {
+ graph[label="decorators:decorator+"]
+ subgraph decorators_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="decorator"]
+  nfa_2->nfa_1[label="epsilon"]
+  nfa_2->nfa_3[label="epsilon"]
+  }
+ subgraph decorators_dfa {
+  dfa_0->dfa_1[label="decorator",color=red]
+  dfa_1->dfa_1[label="decorator",color=red]
+  dfa_1[color=red]
+  }
+}

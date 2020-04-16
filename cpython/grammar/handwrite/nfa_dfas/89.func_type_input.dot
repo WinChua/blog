@@ -1,0 +1,21 @@
+digraph func_type_input {
+ graph[label="func_type_input:func_type NEWLINE* ENDMARKER"]
+ subgraph func_type_input_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="func_type"]
+  nfa_2->nfa_3[label="epsilon"]
+  nfa_3->nfa_4[label="NEWLINE"]
+  nfa_4->nfa_3[label="epsilon"]
+  nfa_3->nfa_5[label="epsilon"]
+  nfa_5->nfa_6[label="ENDMARKER"]
+  nfa_6->nfa_7[label="epsilon"]
+  }
+ subgraph func_type_input_dfa {
+  dfa_0->dfa_1[label="func_type"]
+  dfa_1->dfa_2[label="NEWLINE"]
+  dfa_2->dfa_3[label="ENDMARKER",color=red]
+  dfa_2->dfa_2[label="NEWLINE"]
+  dfa_1->dfa_3[label="ENDMARKER",color=red]
+  dfa_3[color=red]
+  }
+}

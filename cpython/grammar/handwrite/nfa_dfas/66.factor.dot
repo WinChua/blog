@@ -1,0 +1,32 @@
+digraph factor {
+ graph[label="factor:('+' | '-' | '~') factor | power"]
+ subgraph factor_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="epsilon"]
+  nfa_2->nfa_3[label="'+'"]
+  nfa_3->nfa_4[label="epsilon"]
+  nfa_4->nfa_5[label="epsilon"]
+  nfa_5->nfa_6[label="factor"]
+  nfa_6->nfa_7[label="epsilon"]
+  nfa_1->nfa_8[label="epsilon"]
+  nfa_8->nfa_9[label="'-'"]
+  nfa_9->nfa_4[label="epsilon"]
+  nfa_1->nfa_10[label="epsilon"]
+  nfa_10->nfa_11[label="'~'"]
+  nfa_11->nfa_4[label="epsilon"]
+  nfa_0->nfa_12[label="epsilon"]
+  nfa_12->nfa_13[label="power"]
+  nfa_13->nfa_7[label="epsilon"]
+  }
+ subgraph factor_dfa {
+  dfa_0->dfa_1[label="'~'"]
+  dfa_1->dfa_2[label="factor",color=red]
+  dfa_0->dfa_3[label="power",color=red]
+  dfa_0->dfa_4[label="'+'"]
+  dfa_4->dfa_2[label="factor",color=red]
+  dfa_0->dfa_5[label="'-'"]
+  dfa_5->dfa_2[label="factor",color=red]
+  dfa_2[color=red]
+  dfa_3[color=red]
+  }
+}

@@ -1,0 +1,15 @@
+digraph async_funcdef {
+ graph[label="async_funcdef:ASYNC funcdef"]
+ subgraph async_funcdef_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="ASYNC"]
+  nfa_2->nfa_3[label="epsilon"]
+  nfa_3->nfa_4[label="funcdef"]
+  nfa_4->nfa_5[label="epsilon"]
+  }
+ subgraph async_funcdef_dfa {
+  dfa_0->dfa_1[label="ASYNC"]
+  dfa_1->dfa_2[label="funcdef",color=red]
+  dfa_2[color=red]
+  }
+}

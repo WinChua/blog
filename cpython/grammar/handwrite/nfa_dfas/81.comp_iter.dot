@@ -1,0 +1,17 @@
+digraph comp_iter {
+ graph[label="comp_iter:comp_for | comp_if"]
+ subgraph comp_iter_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="comp_for"]
+  nfa_2->nfa_3[label="epsilon"]
+  nfa_0->nfa_4[label="epsilon"]
+  nfa_4->nfa_5[label="comp_if"]
+  nfa_5->nfa_3[label="epsilon"]
+  }
+ subgraph comp_iter_dfa {
+  dfa_0->dfa_1[label="comp_for",color=red]
+  dfa_0->dfa_2[label="comp_if",color=red]
+  dfa_1[color=red]
+  dfa_2[color=red]
+  }
+}

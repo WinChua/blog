@@ -1,0 +1,23 @@
+digraph xor_expr {
+ graph[label="xor_expr:and_expr ('^' and_expr)*"]
+ subgraph xor_expr_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="and_expr"]
+  nfa_2->nfa_3[label="epsilon"]
+  nfa_3->nfa_4[label="epsilon"]
+  nfa_4->nfa_5[label="'^'"]
+  nfa_5->nfa_6[label="epsilon"]
+  nfa_6->nfa_7[label="and_expr"]
+  nfa_7->nfa_8[label="epsilon"]
+  nfa_8->nfa_3[label="epsilon"]
+  nfa_3->nfa_9[label="epsilon"]
+  }
+ subgraph xor_expr_dfa {
+  dfa_0->dfa_1[label="and_expr",color=red]
+  dfa_1->dfa_2[label="'^'"]
+  dfa_2->dfa_3[label="and_expr",color=red]
+  dfa_3->dfa_2[label="'^'"]
+  dfa_1[color=red]
+  dfa_3[color=red]
+  }
+}

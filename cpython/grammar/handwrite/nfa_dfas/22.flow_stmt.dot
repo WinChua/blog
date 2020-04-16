@@ -1,0 +1,32 @@
+digraph flow_stmt {
+ graph[label="flow_stmt:break_stmt | continue_stmt | return_stmt | raise_stmt | yield_stmt"]
+ subgraph flow_stmt_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="break_stmt"]
+  nfa_2->nfa_3[label="epsilon"]
+  nfa_0->nfa_4[label="epsilon"]
+  nfa_4->nfa_5[label="continue_stmt"]
+  nfa_5->nfa_3[label="epsilon"]
+  nfa_0->nfa_6[label="epsilon"]
+  nfa_6->nfa_7[label="return_stmt"]
+  nfa_7->nfa_3[label="epsilon"]
+  nfa_0->nfa_8[label="epsilon"]
+  nfa_8->nfa_9[label="raise_stmt"]
+  nfa_9->nfa_3[label="epsilon"]
+  nfa_0->nfa_10[label="epsilon"]
+  nfa_10->nfa_11[label="yield_stmt"]
+  nfa_11->nfa_3[label="epsilon"]
+  }
+ subgraph flow_stmt_dfa {
+  dfa_0->dfa_1[label="raise_stmt",color=red]
+  dfa_0->dfa_2[label="break_stmt",color=red]
+  dfa_0->dfa_3[label="yield_stmt",color=red]
+  dfa_0->dfa_4[label="continue_stmt",color=red]
+  dfa_0->dfa_5[label="return_stmt",color=red]
+  dfa_1[color=red]
+  dfa_2[color=red]
+  dfa_3[color=red]
+  dfa_4[color=red]
+  dfa_5[color=red]
+  }
+}

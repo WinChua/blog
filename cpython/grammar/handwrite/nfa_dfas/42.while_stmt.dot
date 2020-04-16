@@ -1,0 +1,34 @@
+digraph while_stmt {
+ graph[label="while_stmt:'while' namedexpr_test ':' suite ['else' ':' suite]"]
+ subgraph while_stmt_nfa {
+  nfa_0->nfa_1[label="epsilon"]
+  nfa_1->nfa_2[label="'while'"]
+  nfa_2->nfa_3[label="epsilon"]
+  nfa_3->nfa_4[label="namedexpr_test"]
+  nfa_4->nfa_5[label="epsilon"]
+  nfa_5->nfa_6[label="':'"]
+  nfa_6->nfa_7[label="epsilon"]
+  nfa_7->nfa_8[label="suite"]
+  nfa_8->nfa_9[label="epsilon"]
+  nfa_9->nfa_10[label="epsilon"]
+  nfa_10->nfa_11[label="'else'"]
+  nfa_11->nfa_12[label="epsilon"]
+  nfa_12->nfa_13[label="':'"]
+  nfa_13->nfa_14[label="epsilon"]
+  nfa_14->nfa_15[label="suite"]
+  nfa_15->nfa_16[label="epsilon"]
+  nfa_16->nfa_17[label="epsilon"]
+  nfa_9->nfa_16[label="epsilon"]
+  }
+ subgraph while_stmt_dfa {
+  dfa_0->dfa_1[label="'while'"]
+  dfa_1->dfa_2[label="namedexpr_test"]
+  dfa_2->dfa_3[label="':'"]
+  dfa_3->dfa_4[label="suite",color=red]
+  dfa_4->dfa_5[label="'else'"]
+  dfa_5->dfa_6[label="':'"]
+  dfa_6->dfa_7[label="suite",color=red]
+  dfa_4[color=red]
+  dfa_7[color=red]
+  }
+}
