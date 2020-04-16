@@ -22,6 +22,9 @@ class gAST:
     def genNFA(self):
         raise NotImplemented
 
+    def dumpRule(self):
+        raise NotImplemented
+
     def __repr__(self):
         return f"""<{self.__class__.__name__}:{self.dumpType()}:{self.value}:{','.join(k+"="+v for k, v in self.extra.items() if v)}>"""
 #    def __repr__(self):
@@ -83,6 +86,12 @@ class Atom(gAST):
         else:
             raise Exception("nfa gen for atom err")
 
+    def dumpRule(self):
+        if self.type in (Atom.NAME, Atom.STRING):
+            return self.value + (self.modifier if self.modifier else "")
+        else:
+            return "(" + Rule("",self.value).dumpRule() + ")" + (self.modifier if self.modifier else "")
+
 #    def __repr__(self):
 #        return f'''<Atom type:[{self.type}] 
 #    value[{self.value}] 
@@ -109,6 +118,12 @@ class Item(gAST):
         elif self.type == Item.ATOM:
             start, end = self.value.genNFA()
             return start, end
+
+    def dumpRule(self):
+        if self.type == Item.RHS:
+            return '[' + Rule("", self.value).dumpRule() + ']'
+        else:
+            return self.value.dumpRule()
 #    def __repr__(self):
 #        return f"<Item type:[{self.type}] value[{self.value}]>"
 
@@ -132,6 +147,16 @@ class Rule:
             end.add_arc(ee)
         #nfa.search_nfaState([ss,ee], nfa.dealState, nfa.dealArc)
         return ss, ee
+
+    def dumpRule(self):
+        items_str = []
+        for items in self.value:
+            strs = []
+            for item in items:
+                strs.append(item.dumpRule())
+            items_str.append(" ".join(strs))
+        return " | ".join(items_str)
+
 #    def __repr__(self):
 #        return f"<Rule name:[{self.name}] value[{self.value}]>"
 #
