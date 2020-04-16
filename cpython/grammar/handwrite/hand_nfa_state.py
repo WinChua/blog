@@ -61,7 +61,12 @@ class DFAState:
 
     # equal could not be __eq__ for the reason that the definition of __eq__ in Class will
     # make Class.__hash__ to be None, which could not be hash
-    def equal(self, other):
+    def equal(self, other, endnfa=None):
+        # ## two dfa contains the end nfa state may not equal for the reason that they may consume different arc and jump to different state.
+        # ## if we would like to simply the dfas, may should add another condition:
+        # ##    the arcs of self and other is equal.
+        #if endnfa in self.nfas and endnfa in other.nfas:
+        #    return True
         return self.nfas == other.nfas
 
     @classmethod
@@ -76,13 +81,19 @@ class DFAState:
         # self is the first dfa
         dfas = set()
         dfas.add(self)
+        enddfa = DFAState({endnfa})
+        enddfa.isfinal = True
+        dfas.add(enddfa)
         def direct_dfa(parent_dfa):
             arc_nfas = defaultdict(set)
+            ## find the nfa state that parent_dfa could reach by consume a non-None arc
             for nfa in parent_dfa.nfas:
                 for arc in nfa.arcs:
                     if arc[1] is not None:
+                        ## record all the nfa states to which parent_dfa jump by consume a arc[1]
                         arc_nfas[arc[1]].add(arc[0])
 
+            ## generate all dfa from the nfa state to which parent_dfa jump by consume a arc
             arc_dfas = {}
             for arc, nfas in arc_nfas.items():
                 arc_dfa = DFAState(set())
@@ -92,17 +103,21 @@ class DFAState:
 
                 arc_dfas[arc] = arc_dfa
 
+            ## two dfa is equal if the nfa state they containe is equal
+            ## figure out the dfa which have been explore, take the old one as the next dfa state.
             for arc, dfa in arc_dfas.items():
                 next_dfa = dfa
                 need_explore = True
                 for ed in dfas:
                     if ed.equal(dfa):
                         next_dfa = ed
+                        ## if the dfa state is a new one, we should explore it later.
                         need_explore = False
 
                 parent_dfa.add_arc(next_dfa, arc)
                 dfas.add(next_dfa)
                 if need_explore:
+                    ## explore the next_dfa, put all the next_dfas of next_dfa into dfas
                     direct_dfa(next_dfa)
 
             #return arc_dfas
@@ -124,6 +139,7 @@ def dfa_from_nfa(nfastart, nfaend):
     #print(start_dfa)
     #for arc, dfa in start_dfa.direct_dfas().items():
     #    print(arc, dfa)
+    return start_dfa
     allArcs = searchByArc((start_dfa,))
     return allArcs
     #hand_dot_draw.gen_dot_by_arcs("hello", [(allArcs, "dfa")])
