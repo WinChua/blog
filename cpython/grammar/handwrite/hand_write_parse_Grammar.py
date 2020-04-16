@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+
+
 import hand_nfa_state
 import tokenize
 from hand_grammar_ast import *
