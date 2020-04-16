@@ -81,9 +81,9 @@ class DFAState:
         # self is the first dfa
         dfas = set()
         dfas.add(self)
-        enddfa = DFAState({endnfa})
-        enddfa.isfinal = True
-        dfas.add(enddfa)
+        #enddfa = DFAState({endnfa})
+        #enddfa.isfinal = True
+        #dfas.add(enddfa)
         def direct_dfa(parent_dfa):
             arc_nfas = defaultdict(set)
             ## find the nfa state that parent_dfa could reach by consume a non-None arc
@@ -123,6 +123,7 @@ class DFAState:
             #return arc_dfas
 
         direct_dfa(self)
+        return dfas
 
     def merge(self, other):
         d = DFAState(self.nfas.union(other.nfas))
@@ -135,7 +136,7 @@ class DFAState:
 def dfa_from_nfa(nfastart, nfaend):
     start_dfa = DFAState.from_nfa(nfastart, nfaend)
     #print(start_dfa)
-    start_dfa.direct_dfas(nfaend)
+    all_dfas = start_dfa.direct_dfas(nfaend)
     #print(start_dfa)
     #for arc, dfa in start_dfa.direct_dfas().items():
     #    print(arc, dfa)
