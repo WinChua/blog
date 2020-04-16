@@ -129,29 +129,37 @@ def genAllDfas(cur_token, tokens):
 
     return rule_dfas
 
+import click
+
+@click.group()
+@click.option("--debug/--no-debug", default=False)
+def cli(debug):
+    pass
+
+@cli.command()
+def draw_dot():
+    rule_dfas = genAllDfas(cur_token, tokens)
+    for i, (rule_name, (rule_text, nfa, dfa)) in enumerate(rule_dfas):
+        dfaArcs = hand_nfa_state.searchByArc((dfa, ))
+        nfaArcs = hand_nfa_state.searchByArc(nfa)
+        hand_dot_draw.gen_dot_by_arcs(rule_name, rule_text,[(nfaArcs, "nfa"),(dfaArcs, "dfa")], f'nfa_dfas/{i}.{rule_name}.dot')
+
+@cli.command()
+def regen_rule():
+    rules, _ = parse_grammar(cur_token, tokens)
+    for r in rules:
+        print(r.name + ":", r.dumpRule())
+
+@cli.command()
+@click.option("--no", default=0, type=click.INT, help="no. i rule to generate dot.")
+def draw_no(no):
+    rule_dfas = genAllDfas(cur_token, tokens)
+    rule_name, (rule_text, nfa, dfa) = rule_dfas[no]
+    nfaArcs = hand_nfa_state.searchByArc(nfa)
+    dfaArcs = hand_nfa_state.searchByArc((dfa, ))
+    hand_dot_draw.gen_dot_by_arcs(rule_name, rule_text, [(nfaArcs, "nfa"), (dfaArcs, "dfa")])
+
+
 
 if __name__ == "__main__":
-    # print(rules, cur_token)
-    import sys
-    if len(sys.argv) == 2:
-        rules, cur_token = parse_grammar(cur_token, tokens)
-        i = int(sys.argv[1])
-        nfai = rules[i].genNFA()
-        allArcs = hand_nfa_state.searchByArc(nfai)
-    #else:
-    #    i = 0
-        nfai = rules[i].genNFA()
-        start_dfa = hand_nfa_state.dfa_from_nfa(nfai[0], nfai[1])
-        dfa_allArcs = hand_nfa_state.searchByArc((start_dfa, ))
-        #hand_dot_draw.gen_dot_by_arcs(rules[i].name, [(allArcs, "nfa"), (dfa_allArcs, "dfa")])
-
-        for r in rules:
-            print(r.name+ ":",r.dumpRule())
-        #for r in rules:
-        #    hand_nfa_state.dfa_from_nfa(r.genNFA())
-    else:
-        rule_dfas = genAllDfas(cur_token, tokens)
-        for i, (rule_name, (rule_text, nfa, dfa)) in enumerate(rule_dfas):
-            dfaArcs = hand_nfa_state.searchByArc((dfa, ))
-            nfaArcs = hand_nfa_state.searchByArc(nfa)
-            hand_dot_draw.gen_dot_by_arcs(rule_name, rule_text,[(nfaArcs, "nfa"),(dfaArcs, "dfa")], f'nfa_dfas/{i}.{rule_name}.dot')
+    cli()
