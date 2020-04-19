@@ -22,8 +22,15 @@ digraph testlist {
   dfa_1->dfa_2[label="','",color=red]
   dfa_2->dfa_3[label="test",color=red]
   dfa_3->dfa_2[label="','",color=red]
-  dfa_1[color=red]
-  dfa_2[color=red]
-  dfa_3[color=red]
+  dfa_1[shape=doublecircle]
+  dfa_2[shape=doublecircle]
+  dfa_3[shape=doublecircle]
+  }
+ subgraph testlist_m_dfa {
+  m_dfa_0->m_dfa_1[label="test",color=red]
+  m_dfa_1->m_dfa_2[label="','",color=red]
+  m_dfa_2->m_dfa_1[label="test",color=red]
+  m_dfa_1[shape=doublecircle]
+  m_dfa_2[shape=doublecircle]
   }
 }

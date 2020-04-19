@@ -23,10 +23,19 @@ digraph annassign {
   dfa_0->dfa_1[label="':'"]
   dfa_1->dfa_2[label="test",color=red]
   dfa_2->dfa_3[label="'='"]
-  dfa_3->dfa_4[label="testlist_star_expr",color=red]
-  dfa_3->dfa_5[label="yield_expr",color=red]
-  dfa_2[color=red]
-  dfa_4[color=red]
-  dfa_5[color=red]
+  dfa_3->dfa_4[label="yield_expr",color=red]
+  dfa_3->dfa_5[label="testlist_star_expr",color=red]
+  dfa_2[shape=doublecircle]
+  dfa_4[shape=doublecircle]
+  dfa_5[shape=doublecircle]
+  }
+ subgraph annassign_m_dfa {
+  m_dfa_0->m_dfa_1[label="':'"]
+  m_dfa_1->m_dfa_2[label="test",color=red]
+  m_dfa_2->m_dfa_3[label="'='"]
+  m_dfa_3->m_dfa_4[label="yield_expr",color=red]
+  m_dfa_3->m_dfa_4[label="testlist_star_expr",color=red]
+  m_dfa_2[shape=doublecircle]
+  m_dfa_4[shape=doublecircle]
   }
 }

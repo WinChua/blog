@@ -17,7 +17,12 @@ digraph dotted_as_names {
   dfa_1->dfa_2[label="','"]
   dfa_2->dfa_3[label="dotted_as_name",color=red]
   dfa_3->dfa_2[label="','"]
-  dfa_1[color=red]
-  dfa_3[color=red]
+  dfa_1[shape=doublecircle]
+  dfa_3[shape=doublecircle]
+  }
+ subgraph dotted_as_names_m_dfa {
+  m_dfa_0->m_dfa_1[label="dotted_as_name",color=red]
+  m_dfa_1->m_dfa_0[label="','"]
+  m_dfa_1[shape=doublecircle]
   }
 }

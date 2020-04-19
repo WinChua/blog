@@ -22,7 +22,16 @@ digraph sync_comp_for {
   dfa_2->dfa_3[label="'in'"]
   dfa_3->dfa_4[label="or_test",color=red]
   dfa_4->dfa_5[label="comp_iter",color=red]
-  dfa_4[color=red]
-  dfa_5[color=red]
+  dfa_4[shape=doublecircle]
+  dfa_5[shape=doublecircle]
+  }
+ subgraph sync_comp_for_m_dfa {
+  m_dfa_0->m_dfa_1[label="'for'"]
+  m_dfa_1->m_dfa_2[label="exprlist"]
+  m_dfa_2->m_dfa_3[label="'in'"]
+  m_dfa_3->m_dfa_4[label="or_test",color=red]
+  m_dfa_4->m_dfa_5[label="comp_iter",color=red]
+  m_dfa_4[shape=doublecircle]
+  m_dfa_5[shape=doublecircle]
   }
 }

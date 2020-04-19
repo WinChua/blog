@@ -16,10 +16,18 @@ digraph lambdef_nocond {
   }
  subgraph lambdef_nocond_dfa {
   dfa_0->dfa_1[label="'lambda'"]
-  dfa_1->dfa_2[label="varargslist"]
-  dfa_2->dfa_3[label="':'"]
-  dfa_3->dfa_4[label="test_nocond",color=red]
-  dfa_1->dfa_3[label="':'"]
-  dfa_4[color=red]
+  dfa_1->dfa_2[label="':'"]
+  dfa_2->dfa_3[label="test_nocond",color=red]
+  dfa_1->dfa_4[label="varargslist"]
+  dfa_4->dfa_2[label="':'"]
+  dfa_3[shape=doublecircle]
+  }
+ subgraph lambdef_nocond_m_dfa {
+  m_dfa_0->m_dfa_1[label="'lambda'"]
+  m_dfa_1->m_dfa_2[label="varargslist"]
+  m_dfa_2->m_dfa_3[label="':'"]
+  m_dfa_3->m_dfa_4[label="test_nocond",color=red]
+  m_dfa_1->m_dfa_3[label="':'"]
+  m_dfa_4[shape=doublecircle]
   }
 }

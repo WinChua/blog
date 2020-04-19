@@ -22,11 +22,19 @@ digraph simple_stmt {
  subgraph simple_stmt_dfa {
   dfa_0->dfa_1[label="small_stmt"]
   dfa_1->dfa_2[label="';'"]
-  dfa_2->dfa_3[label="NEWLINE",color=red]
-  dfa_2->dfa_4[label="small_stmt"]
-  dfa_4->dfa_2[label="';'"]
-  dfa_4->dfa_3[label="NEWLINE",color=red]
-  dfa_1->dfa_3[label="NEWLINE",color=red]
-  dfa_3[color=red]
+  dfa_2->dfa_3[label="small_stmt"]
+  dfa_3->dfa_2[label="';'"]
+  dfa_3->dfa_4[label="NEWLINE",color=red]
+  dfa_2->dfa_4[label="NEWLINE",color=red]
+  dfa_1->dfa_4[label="NEWLINE",color=red]
+  dfa_4[shape=doublecircle]
+  }
+ subgraph simple_stmt_m_dfa {
+  m_dfa_0->m_dfa_1[label="small_stmt"]
+  m_dfa_1->m_dfa_2[label="NEWLINE",color=red]
+  m_dfa_1->m_dfa_3[label="';'"]
+  m_dfa_3->m_dfa_2[label="NEWLINE",color=red]
+  m_dfa_3->m_dfa_1[label="small_stmt"]
+  m_dfa_2[shape=doublecircle]
   }
 }

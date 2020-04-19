@@ -14,15 +14,21 @@ digraph file_input {
   nfa_8->nfa_9[label="epsilon"]
   }
  subgraph file_input_dfa {
-  dfa_0->dfa_1[label="ENDMARKER",color=red]
-  dfa_0->dfa_2[label="NEWLINE"]
-  dfa_2->dfa_2[label="NEWLINE"]
-  dfa_2->dfa_1[label="ENDMARKER",color=red]
-  dfa_2->dfa_3[label="stmt"]
-  dfa_3->dfa_2[label="NEWLINE"]
-  dfa_3->dfa_1[label="ENDMARKER",color=red]
+  dfa_0->dfa_1[label="NEWLINE"]
+  dfa_1->dfa_1[label="NEWLINE"]
+  dfa_1->dfa_2[label="ENDMARKER",color=red]
+  dfa_1->dfa_3[label="stmt"]
+  dfa_3->dfa_1[label="NEWLINE"]
+  dfa_3->dfa_2[label="ENDMARKER",color=red]
   dfa_3->dfa_3[label="stmt"]
   dfa_0->dfa_3[label="stmt"]
-  dfa_1[color=red]
+  dfa_0->dfa_2[label="ENDMARKER",color=red]
+  dfa_2[shape=doublecircle]
+  }
+ subgraph file_input_m_dfa {
+  m_dfa_0->m_dfa_1[label="ENDMARKER",color=red]
+  m_dfa_0->m_dfa_0[label="NEWLINE"]
+  m_dfa_0->m_dfa_0[label="stmt"]
+  m_dfa_1[shape=doublecircle]
   }
 }

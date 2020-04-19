@@ -16,7 +16,14 @@ digraph comp_if {
   dfa_0->dfa_1[label="'if'"]
   dfa_1->dfa_2[label="test_nocond",color=red]
   dfa_2->dfa_3[label="comp_iter",color=red]
-  dfa_2[color=red]
-  dfa_3[color=red]
+  dfa_2[shape=doublecircle]
+  dfa_3[shape=doublecircle]
+  }
+ subgraph comp_if_m_dfa {
+  m_dfa_0->m_dfa_1[label="'if'"]
+  m_dfa_1->m_dfa_2[label="test_nocond",color=red]
+  m_dfa_2->m_dfa_3[label="comp_iter",color=red]
+  m_dfa_2[shape=doublecircle]
+  m_dfa_3[shape=doublecircle]
   }
 }

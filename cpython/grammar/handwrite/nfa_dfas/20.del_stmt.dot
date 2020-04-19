@@ -10,6 +10,11 @@ digraph del_stmt {
  subgraph del_stmt_dfa {
   dfa_0->dfa_1[label="'del'"]
   dfa_1->dfa_2[label="exprlist",color=red]
-  dfa_2[color=red]
+  dfa_2[shape=doublecircle]
+  }
+ subgraph del_stmt_m_dfa {
+  m_dfa_0->m_dfa_1[label="'del'"]
+  m_dfa_1->m_dfa_2[label="exprlist",color=red]
+  m_dfa_2[shape=doublecircle]
   }
 }

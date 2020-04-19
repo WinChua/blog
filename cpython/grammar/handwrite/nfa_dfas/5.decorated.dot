@@ -18,10 +18,17 @@ digraph decorated {
  subgraph decorated_dfa {
   dfa_0->dfa_1[label="decorators"]
   dfa_1->dfa_2[label="classdef",color=red]
-  dfa_1->dfa_3[label="funcdef",color=red]
-  dfa_1->dfa_4[label="async_funcdef",color=red]
-  dfa_2[color=red]
-  dfa_3[color=red]
-  dfa_4[color=red]
+  dfa_1->dfa_3[label="async_funcdef",color=red]
+  dfa_1->dfa_4[label="funcdef",color=red]
+  dfa_2[shape=doublecircle]
+  dfa_3[shape=doublecircle]
+  dfa_4[shape=doublecircle]
+  }
+ subgraph decorated_m_dfa {
+  m_dfa_0->m_dfa_1[label="decorators"]
+  m_dfa_1->m_dfa_2[label="classdef",color=red]
+  m_dfa_1->m_dfa_2[label="async_funcdef",color=red]
+  m_dfa_1->m_dfa_2[label="funcdef",color=red]
+  m_dfa_2[shape=doublecircle]
   }
 }

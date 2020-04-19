@@ -13,7 +13,13 @@ digraph yield_expr {
  subgraph yield_expr_dfa {
   dfa_0->dfa_1[label="'yield'",color=red]
   dfa_1->dfa_2[label="yield_arg",color=red]
-  dfa_1[color=red]
-  dfa_2[color=red]
+  dfa_1[shape=doublecircle]
+  dfa_2[shape=doublecircle]
+  }
+ subgraph yield_expr_m_dfa {
+  m_dfa_0->m_dfa_1[label="'yield'",color=red]
+  m_dfa_1->m_dfa_2[label="yield_arg",color=red]
+  m_dfa_1[shape=doublecircle]
+  m_dfa_2[shape=doublecircle]
   }
 }

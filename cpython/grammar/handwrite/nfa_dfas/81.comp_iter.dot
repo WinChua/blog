@@ -9,9 +9,14 @@ digraph comp_iter {
   nfa_5->nfa_3[label="epsilon"]
   }
  subgraph comp_iter_dfa {
-  dfa_0->dfa_1[label="comp_for",color=red]
-  dfa_0->dfa_2[label="comp_if",color=red]
-  dfa_1[color=red]
-  dfa_2[color=red]
+  dfa_0->dfa_1[label="comp_if",color=red]
+  dfa_0->dfa_2[label="comp_for",color=red]
+  dfa_1[shape=doublecircle]
+  dfa_2[shape=doublecircle]
+  }
+ subgraph comp_iter_m_dfa {
+  m_dfa_0->m_dfa_1[label="comp_if",color=red]
+  m_dfa_0->m_dfa_1[label="comp_for",color=red]
+  m_dfa_1[shape=doublecircle]
   }
 }

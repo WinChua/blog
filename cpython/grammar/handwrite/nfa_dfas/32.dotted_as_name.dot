@@ -16,7 +16,14 @@ digraph dotted_as_name {
   dfa_0->dfa_1[label="dotted_name",color=red]
   dfa_1->dfa_2[label="'as'"]
   dfa_2->dfa_3[label="NAME",color=red]
-  dfa_1[color=red]
-  dfa_3[color=red]
+  dfa_1[shape=doublecircle]
+  dfa_3[shape=doublecircle]
+  }
+ subgraph dotted_as_name_m_dfa {
+  m_dfa_0->m_dfa_1[label="dotted_name",color=red]
+  m_dfa_1->m_dfa_2[label="'as'"]
+  m_dfa_2->m_dfa_3[label="NAME",color=red]
+  m_dfa_1[shape=doublecircle]
+  m_dfa_3[shape=doublecircle]
   }
 }

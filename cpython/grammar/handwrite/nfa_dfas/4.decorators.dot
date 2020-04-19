@@ -9,6 +9,11 @@ digraph decorators {
  subgraph decorators_dfa {
   dfa_0->dfa_1[label="decorator",color=red]
   dfa_1->dfa_1[label="decorator",color=red]
-  dfa_1[color=red]
+  dfa_1[shape=doublecircle]
+  }
+ subgraph decorators_m_dfa {
+  m_dfa_0->m_dfa_1[label="decorator",color=red]
+  m_dfa_1->m_dfa_1[label="decorator",color=red]
+  m_dfa_1[shape=doublecircle]
   }
 }

@@ -36,6 +36,19 @@ digraph funcdef {
   dfa_3->dfa_7[label="'->'"]
   dfa_7->dfa_8[label="test"]
   dfa_8->dfa_4[label="':'"]
-  dfa_5[color=red]
+  dfa_5[shape=doublecircle]
+  }
+ subgraph funcdef_m_dfa {
+  m_dfa_0->m_dfa_1[label="'def'"]
+  m_dfa_1->m_dfa_2[label="NAME"]
+  m_dfa_2->m_dfa_3[label="parameters"]
+  m_dfa_3->m_dfa_4[label="'->'"]
+  m_dfa_4->m_dfa_5[label="test"]
+  m_dfa_5->m_dfa_6[label="':'"]
+  m_dfa_6->m_dfa_7[label="func_body_suite",color=red]
+  m_dfa_6->m_dfa_8[label="TYPE_COMMENT"]
+  m_dfa_8->m_dfa_7[label="func_body_suite",color=red]
+  m_dfa_3->m_dfa_6[label="':'"]
+  m_dfa_7[shape=doublecircle]
   }
 }

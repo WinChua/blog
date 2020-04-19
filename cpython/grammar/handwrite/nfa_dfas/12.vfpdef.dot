@@ -7,6 +7,10 @@ digraph vfpdef {
   }
  subgraph vfpdef_dfa {
   dfa_0->dfa_1[label="NAME",color=red]
-  dfa_1[color=red]
+  dfa_1[shape=doublecircle]
+  }
+ subgraph vfpdef_m_dfa {
+  m_dfa_0->m_dfa_1[label="NAME",color=red]
+  m_dfa_1[shape=doublecircle]
   }
 }

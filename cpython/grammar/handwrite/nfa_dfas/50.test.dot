@@ -20,14 +20,24 @@ digraph test {
   nfa_15->nfa_13[label="epsilon"]
   }
  subgraph test_dfa {
-  dfa_0->dfa_1[label="or_test",color=red]
-  dfa_1->dfa_2[label="'if'"]
-  dfa_2->dfa_3[label="or_test"]
-  dfa_3->dfa_4[label="'else'"]
-  dfa_4->dfa_5[label="test",color=red]
-  dfa_0->dfa_6[label="lambdef",color=red]
-  dfa_1[color=red]
-  dfa_5[color=red]
-  dfa_6[color=red]
+  dfa_0->dfa_1[label="lambdef",color=red]
+  dfa_0->dfa_2[label="or_test",color=red]
+  dfa_2->dfa_3[label="'if'"]
+  dfa_3->dfa_4[label="or_test"]
+  dfa_4->dfa_5[label="'else'"]
+  dfa_5->dfa_6[label="test",color=red]
+  dfa_1[shape=doublecircle]
+  dfa_2[shape=doublecircle]
+  dfa_6[shape=doublecircle]
+  }
+ subgraph test_m_dfa {
+  m_dfa_0->m_dfa_1[label="lambdef",color=red]
+  m_dfa_0->m_dfa_2[label="or_test",color=red]
+  m_dfa_2->m_dfa_3[label="'if'"]
+  m_dfa_3->m_dfa_4[label="or_test"]
+  m_dfa_4->m_dfa_5[label="'else'"]
+  m_dfa_5->m_dfa_1[label="test",color=red]
+  m_dfa_1[shape=doublecircle]
+  m_dfa_2[shape=doublecircle]
   }
 }

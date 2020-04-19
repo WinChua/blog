@@ -30,6 +30,17 @@ digraph decorator {
   dfa_3->dfa_6[label="arglist"]
   dfa_6->dfa_4[label="')'"]
   dfa_2->dfa_5[label="NEWLINE",color=red]
-  dfa_5[color=red]
+  dfa_5[shape=doublecircle]
+  }
+ subgraph decorator_m_dfa {
+  m_dfa_0->m_dfa_1[label="'@'"]
+  m_dfa_1->m_dfa_2[label="dotted_name"]
+  m_dfa_2->m_dfa_3[label="NEWLINE",color=red]
+  m_dfa_2->m_dfa_4[label="'('"]
+  m_dfa_4->m_dfa_5[label="')'"]
+  m_dfa_5->m_dfa_3[label="NEWLINE",color=red]
+  m_dfa_4->m_dfa_6[label="arglist"]
+  m_dfa_6->m_dfa_5[label="')'"]
+  m_dfa_3[shape=doublecircle]
   }
 }

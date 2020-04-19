@@ -14,12 +14,19 @@ digraph atom_expr {
   nfa_1->nfa_4[label="epsilon"]
   }
  subgraph atom_expr_dfa {
-  dfa_0->dfa_1[label="AWAIT"]
-  dfa_1->dfa_2[label="atom",color=red]
-  dfa_2->dfa_3[label="trailer",color=red]
-  dfa_3->dfa_3[label="trailer",color=red]
-  dfa_0->dfa_2[label="atom",color=red]
-  dfa_2[color=red]
-  dfa_3[color=red]
+  dfa_0->dfa_1[label="atom",color=red]
+  dfa_1->dfa_2[label="trailer",color=red]
+  dfa_2->dfa_2[label="trailer",color=red]
+  dfa_0->dfa_3[label="AWAIT"]
+  dfa_3->dfa_1[label="atom",color=red]
+  dfa_1[shape=doublecircle]
+  dfa_2[shape=doublecircle]
+  }
+ subgraph atom_expr_m_dfa {
+  m_dfa_0->m_dfa_1[label="atom",color=red]
+  m_dfa_1->m_dfa_1[label="trailer",color=red]
+  m_dfa_0->m_dfa_2[label="AWAIT"]
+  m_dfa_2->m_dfa_1[label="atom",color=red]
+  m_dfa_1[shape=doublecircle]
   }
 }

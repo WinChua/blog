@@ -10,6 +10,11 @@ digraph import_name {
  subgraph import_name_dfa {
   dfa_0->dfa_1[label="'import'"]
   dfa_1->dfa_2[label="dotted_as_names",color=red]
-  dfa_2[color=red]
+  dfa_2[shape=doublecircle]
+  }
+ subgraph import_name_m_dfa {
+  m_dfa_0->m_dfa_1[label="'import'"]
+  m_dfa_1->m_dfa_2[label="dotted_as_names",color=red]
+  m_dfa_2[shape=doublecircle]
   }
 }

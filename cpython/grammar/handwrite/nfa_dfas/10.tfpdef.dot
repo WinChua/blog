@@ -16,7 +16,14 @@ digraph tfpdef {
   dfa_0->dfa_1[label="NAME",color=red]
   dfa_1->dfa_2[label="':'"]
   dfa_2->dfa_3[label="test",color=red]
-  dfa_1[color=red]
-  dfa_3[color=red]
+  dfa_1[shape=doublecircle]
+  dfa_3[shape=doublecircle]
+  }
+ subgraph tfpdef_m_dfa {
+  m_dfa_0->m_dfa_1[label="NAME",color=red]
+  m_dfa_1->m_dfa_2[label="':'"]
+  m_dfa_2->m_dfa_3[label="test",color=red]
+  m_dfa_1[shape=doublecircle]
+  m_dfa_3[shape=doublecircle]
   }
 }

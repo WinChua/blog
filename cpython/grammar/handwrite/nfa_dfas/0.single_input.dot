@@ -14,12 +14,19 @@ digraph single_input {
   nfa_9->nfa_3[label="epsilon"]
   }
  subgraph single_input_dfa {
-  dfa_0->dfa_1[label="NEWLINE",color=red]
-  dfa_0->dfa_2[label="simple_stmt",color=red]
-  dfa_0->dfa_3[label="compound_stmt"]
-  dfa_3->dfa_4[label="NEWLINE",color=red]
-  dfa_1[color=red]
-  dfa_2[color=red]
-  dfa_4[color=red]
+  dfa_0->dfa_1[label="compound_stmt"]
+  dfa_1->dfa_2[label="NEWLINE",color=red]
+  dfa_0->dfa_3[label="simple_stmt",color=red]
+  dfa_0->dfa_4[label="NEWLINE",color=red]
+  dfa_2[shape=doublecircle]
+  dfa_3[shape=doublecircle]
+  dfa_4[shape=doublecircle]
+  }
+ subgraph single_input_m_dfa {
+  m_dfa_0->m_dfa_1[label="simple_stmt",color=red]
+  m_dfa_0->m_dfa_1[label="NEWLINE",color=red]
+  m_dfa_0->m_dfa_2[label="compound_stmt"]
+  m_dfa_2->m_dfa_1[label="NEWLINE",color=red]
+  m_dfa_1[shape=doublecircle]
   }
 }

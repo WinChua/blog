@@ -7,6 +7,10 @@ digraph break_stmt {
   }
  subgraph break_stmt_dfa {
   dfa_0->dfa_1[label="'break'",color=red]
-  dfa_1[color=red]
+  dfa_1[shape=doublecircle]
+  }
+ subgraph break_stmt_m_dfa {
+  m_dfa_0->m_dfa_1[label="'break'",color=red]
+  m_dfa_1[shape=doublecircle]
   }
 }

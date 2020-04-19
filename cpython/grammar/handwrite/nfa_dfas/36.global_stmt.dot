@@ -20,7 +20,13 @@ digraph global_stmt {
   dfa_2->dfa_3[label="','"]
   dfa_3->dfa_4[label="NAME",color=red]
   dfa_4->dfa_3[label="','"]
-  dfa_2[color=red]
-  dfa_4[color=red]
+  dfa_2[shape=doublecircle]
+  dfa_4[shape=doublecircle]
+  }
+ subgraph global_stmt_m_dfa {
+  m_dfa_0->m_dfa_1[label="'global'"]
+  m_dfa_1->m_dfa_2[label="NAME",color=red]
+  m_dfa_2->m_dfa_1[label="','"]
+  m_dfa_2[shape=doublecircle]
   }
 }

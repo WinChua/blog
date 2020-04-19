@@ -14,7 +14,13 @@ digraph not_test {
   dfa_0->dfa_1[label="'not'"]
   dfa_1->dfa_2[label="not_test",color=red]
   dfa_0->dfa_3[label="comparison",color=red]
-  dfa_2[color=red]
-  dfa_3[color=red]
+  dfa_2[shape=doublecircle]
+  dfa_3[shape=doublecircle]
+  }
+ subgraph not_test_m_dfa {
+  m_dfa_0->m_dfa_1[label="comparison",color=red]
+  m_dfa_0->m_dfa_2[label="'not'"]
+  m_dfa_2->m_dfa_1[label="not_test",color=red]
+  m_dfa_1[shape=doublecircle]
   }
 }

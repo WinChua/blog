@@ -9,9 +9,14 @@ digraph import_stmt {
   nfa_5->nfa_3[label="epsilon"]
   }
  subgraph import_stmt_dfa {
-  dfa_0->dfa_1[label="import_from",color=red]
-  dfa_0->dfa_2[label="import_name",color=red]
-  dfa_1[color=red]
-  dfa_2[color=red]
+  dfa_0->dfa_1[label="import_name",color=red]
+  dfa_0->dfa_2[label="import_from",color=red]
+  dfa_1[shape=doublecircle]
+  dfa_2[shape=doublecircle]
+  }
+ subgraph import_stmt_m_dfa {
+  m_dfa_0->m_dfa_1[label="import_name",color=red]
+  m_dfa_0->m_dfa_1[label="import_from",color=red]
+  m_dfa_1[shape=doublecircle]
   }
 }

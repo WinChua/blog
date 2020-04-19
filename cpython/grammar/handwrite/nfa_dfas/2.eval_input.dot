@@ -13,9 +13,15 @@ digraph eval_input {
  subgraph eval_input_dfa {
   dfa_0->dfa_1[label="testlist"]
   dfa_1->dfa_2[label="NEWLINE"]
-  dfa_2->dfa_3[label="ENDMARKER",color=red]
   dfa_2->dfa_2[label="NEWLINE"]
+  dfa_2->dfa_3[label="ENDMARKER",color=red]
   dfa_1->dfa_3[label="ENDMARKER",color=red]
-  dfa_3[color=red]
+  dfa_3[shape=doublecircle]
+  }
+ subgraph eval_input_m_dfa {
+  m_dfa_0->m_dfa_1[label="testlist"]
+  m_dfa_1->m_dfa_2[label="ENDMARKER",color=red]
+  m_dfa_1->m_dfa_1[label="NEWLINE"]
+  m_dfa_2[shape=doublecircle]
   }
 }

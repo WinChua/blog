@@ -18,11 +18,20 @@ digraph func_type {
   }
  subgraph func_type_dfa {
   dfa_0->dfa_1[label="'('"]
-  dfa_1->dfa_2[label="')'"]
-  dfa_2->dfa_3[label="'->'"]
-  dfa_3->dfa_4[label="test",color=red]
-  dfa_1->dfa_5[label="typelist"]
-  dfa_5->dfa_2[label="')'"]
-  dfa_4[color=red]
+  dfa_1->dfa_2[label="typelist"]
+  dfa_2->dfa_3[label="')'"]
+  dfa_3->dfa_4[label="'->'"]
+  dfa_4->dfa_5[label="test",color=red]
+  dfa_1->dfa_3[label="')'"]
+  dfa_5[shape=doublecircle]
+  }
+ subgraph func_type_m_dfa {
+  m_dfa_0->m_dfa_1[label="'('"]
+  m_dfa_1->m_dfa_2[label="')'"]
+  m_dfa_2->m_dfa_3[label="'->'"]
+  m_dfa_3->m_dfa_4[label="test",color=red]
+  m_dfa_1->m_dfa_5[label="typelist"]
+  m_dfa_5->m_dfa_2[label="')'"]
+  m_dfa_4[shape=doublecircle]
   }
 }

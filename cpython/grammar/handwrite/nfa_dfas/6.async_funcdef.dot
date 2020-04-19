@@ -10,6 +10,11 @@ digraph async_funcdef {
  subgraph async_funcdef_dfa {
   dfa_0->dfa_1[label="ASYNC"]
   dfa_1->dfa_2[label="funcdef",color=red]
-  dfa_2[color=red]
+  dfa_2[shape=doublecircle]
+  }
+ subgraph async_funcdef_m_dfa {
+  m_dfa_0->m_dfa_1[label="ASYNC"]
+  m_dfa_1->m_dfa_2[label="funcdef",color=red]
+  m_dfa_2[shape=doublecircle]
   }
 }

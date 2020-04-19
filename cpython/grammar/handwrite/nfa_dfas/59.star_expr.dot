@@ -10,6 +10,11 @@ digraph star_expr {
  subgraph star_expr_dfa {
   dfa_0->dfa_1[label="'*'"]
   dfa_1->dfa_2[label="expr",color=red]
-  dfa_2[color=red]
+  dfa_2[shape=doublecircle]
+  }
+ subgraph star_expr_m_dfa {
+  m_dfa_0->m_dfa_1[label="'*'"]
+  m_dfa_1->m_dfa_2[label="expr",color=red]
+  m_dfa_2[shape=doublecircle]
   }
 }

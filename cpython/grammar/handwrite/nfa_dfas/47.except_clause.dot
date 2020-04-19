@@ -22,8 +22,17 @@ digraph except_clause {
   dfa_1->dfa_2[label="test",color=red]
   dfa_2->dfa_3[label="'as'"]
   dfa_3->dfa_4[label="NAME",color=red]
-  dfa_1[color=red]
-  dfa_2[color=red]
-  dfa_4[color=red]
+  dfa_1[shape=doublecircle]
+  dfa_2[shape=doublecircle]
+  dfa_4[shape=doublecircle]
+  }
+ subgraph except_clause_m_dfa {
+  m_dfa_0->m_dfa_1[label="'except'",color=red]
+  m_dfa_1->m_dfa_2[label="test",color=red]
+  m_dfa_2->m_dfa_3[label="'as'"]
+  m_dfa_3->m_dfa_4[label="NAME",color=red]
+  m_dfa_1[shape=doublecircle]
+  m_dfa_2[shape=doublecircle]
+  m_dfa_4[shape=doublecircle]
   }
 }

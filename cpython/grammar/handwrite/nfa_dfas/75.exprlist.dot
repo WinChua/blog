@@ -28,18 +28,27 @@ digraph exprlist {
   nfa_21->nfa_4[label="epsilon"]
   }
  subgraph exprlist_dfa {
-  dfa_0->dfa_1[label="star_expr",color=red]
+  dfa_0->dfa_1[label="expr",color=red]
   dfa_1->dfa_2[label="','",color=red]
   dfa_2->dfa_3[label="star_expr",color=red]
   dfa_3->dfa_2[label="','",color=red]
   dfa_2->dfa_4[label="expr",color=red]
   dfa_4->dfa_2[label="','",color=red]
-  dfa_0->dfa_5[label="expr",color=red]
+  dfa_0->dfa_5[label="star_expr",color=red]
   dfa_5->dfa_2[label="','",color=red]
-  dfa_1[color=red]
-  dfa_2[color=red]
-  dfa_3[color=red]
-  dfa_4[color=red]
-  dfa_5[color=red]
+  dfa_1[shape=doublecircle]
+  dfa_2[shape=doublecircle]
+  dfa_3[shape=doublecircle]
+  dfa_4[shape=doublecircle]
+  dfa_5[shape=doublecircle]
+  }
+ subgraph exprlist_m_dfa {
+  m_dfa_0->m_dfa_1[label="expr",color=red]
+  m_dfa_1->m_dfa_2[label="','",color=red]
+  m_dfa_2->m_dfa_1[label="star_expr",color=red]
+  m_dfa_2->m_dfa_1[label="expr",color=red]
+  m_dfa_0->m_dfa_1[label="star_expr",color=red]
+  m_dfa_1[shape=doublecircle]
+  m_dfa_2[shape=doublecircle]
   }
 }

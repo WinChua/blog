@@ -17,6 +17,13 @@ digraph parameters {
   dfa_1->dfa_2[label="typedargslist"]
   dfa_2->dfa_3[label="')'",color=red]
   dfa_1->dfa_3[label="')'",color=red]
-  dfa_3[color=red]
+  dfa_3[shape=doublecircle]
+  }
+ subgraph parameters_m_dfa {
+  m_dfa_0->m_dfa_1[label="'('"]
+  m_dfa_1->m_dfa_2[label="')'",color=red]
+  m_dfa_1->m_dfa_3[label="typedargslist"]
+  m_dfa_3->m_dfa_2[label="')'",color=red]
+  m_dfa_2[shape=doublecircle]
   }
 }
