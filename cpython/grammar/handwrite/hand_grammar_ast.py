@@ -1,6 +1,5 @@
 import hand_nfa_state as nfa
 
-
 class gAST:
     def __init__(self, type, value, **kwargs):
         self.type = type
