@@ -156,6 +156,8 @@ class Rule:
             items_str.append(" ".join(strs))
         return " | ".join(items_str)
 
+    def __repr__(self):
+        return f"<Rule [{self.name}]>"
 #    def __repr__(self):
 #        return f"<Rule name:[{self.name}] value[{self.value}]>"
 #

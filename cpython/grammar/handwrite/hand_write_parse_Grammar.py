@@ -129,8 +129,9 @@ def genAllDfas(cur_token, tokens):
         start_dfa, all_dfa = hand_nfa_state.dfa_from_nfa(nfa[0], nfa[1])
         minimize_dfaset = minimize_dfa(all_dfa)
 
-        arcs = build_arc(minimize_dfaset, start_dfa)
-        rule_dfas.append((r.name, (rule_text, nfa, start_dfa, arcs)))
+        m_dfa = build_arc(minimize_dfaset, start_dfa)
+        #arcs = build_arc(minimize_dfaset, start_dfa)
+        rule_dfas.append((r.name, (rule_text, nfa, start_dfa, m_dfa)))
 
     return rule_dfas
 
@@ -148,7 +149,8 @@ def draw_dot():
     for i, (rule_name, (rule_text, nfa, dfa, marcs)) in enumerate(rule_dfas):
         dfaArcs = hand_nfa_state.searchByArc((dfa, ))
         nfaArcs = hand_nfa_state.searchByArc(nfa)
-        hand_dot_draw.gen_dot_by_arcs(rule_name, rule_text,[(nfaArcs, "nfa"),(dfaArcs, "dfa"), (marcs, "m_dfa")], f'nfa_dfas/{i}.{rule_name}.dot')
+        mdfaArcs = hand_nfa_state.searchByArc((marcs, ))
+        hand_dot_draw.gen_dot_by_arcs(rule_name, rule_text,[(nfaArcs, "nfa"),(dfaArcs, "dfa"), (mdfaArcs, "m_dfa")], f'nfa_dfas/{i}.{rule_name}.dot')
 
 
 @cli.command()
@@ -162,7 +164,7 @@ def regen_rule():
 @click.option("--no", default=0, type=click.INT, help="no. i rule to generate dot.")
 def draw_no(no):
     rule_dfas = genAllDfas(cur_token, tokens)
-    rule_name, (rule_text, nfa, dfa) = rule_dfas[no]
+    rule_name, (rule_text, nfa, dfa, m_dfa) = rule_dfas[no]
     nfaArcs = hand_nfa_state.searchByArc(nfa)
     dfaArcs = hand_nfa_state.searchByArc((dfa, ))
     hand_dot_draw.gen_dot_by_arcs(rule_name, rule_text, [(nfaArcs, "nfa"), (dfaArcs, "dfa")])
@@ -172,20 +174,50 @@ from pprint import pprint
 @cli.command()
 @click.option("--no", type=click.INT, default=30, help="no rule to show")
 def explore(no):
-    rules, _ = parse_grammar(cur_token, tokens)
-    r = rules[no]
-    rule_text = r.dumpRule()
-    nfa = r.genNFA()
-    start_dfa, all_dfa = hand_nfa_state.dfa_from_nfa(nfa[0], nfa[1])
-    #print("no is", no, "len(all_dfa) is", len(all_dfa))
-    minimize_dfaset = minimize_dfa(all_dfa)
+    pass
+    #rules, _ = parse_grammar(cur_token, tokens)
+    #r = rules[no]
+    #rule_text = r.dumpRule()
+    #nfa = r.genNFA()
+    #start_dfa, all_dfa = hand_nfa_state.dfa_from_nfa(nfa[0], nfa[1])
+    ##print("no is", no, "len(all_dfa) is", len(all_dfa))
+    #minimize_dfaset = minimize_dfa(all_dfa)
 
-    arcs = build_arc(minimize_dfaset, start_dfa)
-    hand_dot_draw.gen_dot_by_arcs("abc", "abc", [(arcs, "dfa")])
+    #arcs = build_arc(minimize_dfaset, start_dfa)
+    #hand_dot_draw.gen_dot_by_arcs("abc", "abc", [(arcs, "dfa")])
     #for d in minimize_dfa(all_dfa):
     #    for dd in d:
     #        print(",", end="")
     #        pprint(dd)
+
+@cli.command()
+def cal_first_set():
+    rule_dfas = genAllDfas(cur_token, tokens)
+    rule_name_to_mdfa = {}
+    rule_names = []
+    for i, (rule_name, (rule_text, _, _, m_dfa)) in enumerate(rule_dfas):
+        rule_names.append(rule_name)
+        rule_name_to_mdfa[rule_name] = m_dfa
+
+    rule_fset = {}
+    def get_first_set(rn):
+        if rn in rule_fset:
+            return rule_fset[rn]
+        fset_rn = set()
+        s_dfa = rule_name_to_mdfa[rn]
+        for _, arc in s_dfa.arcs:
+            if arc not in rule_names:
+                # arc is terminal
+                fset_rn.add(arc)
+            else:
+                fset_rn.update(get_first_set(arc))
+        rule_fset[rn] = fset_rn
+        return fset_rn
+
+    for rn in sorted(rule_names):
+        print(rn, sorted(list(get_first_set(rn))))
+
+
 
 def build_arc(minimize_dfaset, start_dfa):
     start_dfa_set = None
@@ -201,6 +233,7 @@ def build_arc(minimize_dfaset, start_dfa):
                 for targetstate, arc in dfastate.arcs:
                     if targetstate in d_j:
                         d_i.add_arc(arc, d_j)
+    return start_dfa_set
     arcs = hand_nfa_state.searchByArc((start_dfa_set,))
     return arcs
 
@@ -225,6 +258,7 @@ class DFASet:
 
     def __repr__(self):
         arcs = ":".join([",".join([a for _, a in s.arcs]) for s in self.dfa_set])
+        return f'''<DSet {len(self.dfa_set)},f[{self.isfinal}],dfaid:[{','.join([str(id(s)) for s in self.dfa_set])}], [{','.join(a[1] for a in self.arcs)}]>'''
         return f'''<DSet {len(self.dfa_set)},f[{self.isfinal}],dfaid:[{','.join([str(id(s)) for s in self.dfa_set])}], [{arcs}]>'''
     def __iter__(self):
         return iter(self.dfa_set)
