@@ -126,22 +126,16 @@ class DFAState:
         return dfas
 
     def merge(self, other):
+        ## two dfa state could merge if only they transform from the same dfa state with the same label
         d = DFAState(self.nfas.union(other.nfas))
         d.isfinal = self.isfinal or other.isfinal
         return d
 
     def __repr__(self):
-        return f"<DFAState, {len(self.nfas)} nfas isfinale[{self.isfinal}]>"
+        return f"<DFAState, {len(self.nfas)} nfas isfinale[{self.isfinal}] id[{id(self)}]>"
 
 def dfa_from_nfa(nfastart, nfaend):
     start_dfa = DFAState.from_nfa(nfastart, nfaend)
-    #print(start_dfa)
     all_dfas = start_dfa.direct_dfas(nfaend)
-    #print(start_dfa)
-    #for arc, dfa in start_dfa.direct_dfas().items():
-    #    print(arc, dfa)
-    return start_dfa
-    allArcs = searchByArc((start_dfa,))
-    return allArcs
-    #hand_dot_draw.gen_dot_by_arcs("hello", [(allArcs, "dfa")])
+    return start_dfa, all_dfas
 
