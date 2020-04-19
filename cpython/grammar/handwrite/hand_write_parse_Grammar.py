@@ -199,6 +199,7 @@ def cal_first_set():
         rule_names.append(rule_name)
         rule_name_to_mdfa[rule_name] = m_dfa
 
+    terminal_set = set()
     rule_fset = {}
     def get_first_set(rn):
         if rn in rule_fset:
@@ -208,6 +209,7 @@ def cal_first_set():
         for _, arc in s_dfa.arcs:
             if arc not in rule_names:
                 # arc is terminal
+                terminal_set.add(arc)
                 fset_rn.add(arc)
             else:
                 fset_rn.update(get_first_set(arc))
@@ -215,7 +217,9 @@ def cal_first_set():
         return fset_rn
 
     for rn in sorted(rule_names):
-        print(rn, sorted(list(get_first_set(rn))))
+        #print(rn, sorted(list(get_first_set(rn))))
+        get_first_set(rn)
+    print(terminal_set)
 
 
 
