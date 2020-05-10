@@ -11,7 +11,7 @@ do
     fi
     if [ -n ${last} ]
     then
-        src="${last} ${1}"
+        src="${last}\ ${1}"
     else
         src="${1}"
     fi
