@@ -31,14 +31,14 @@ digraph compound_stmt {
   }
  subgraph compound_stmt_dfa {
   dfa_0->dfa_1[label="if_stmt",color=red]
-  dfa_0->dfa_2[label="with_stmt",color=red]
-  dfa_0->dfa_3[label="async_stmt",color=red]
-  dfa_0->dfa_4[label="while_stmt",color=red]
-  dfa_0->dfa_5[label="funcdef",color=red]
-  dfa_0->dfa_6[label="for_stmt",color=red]
-  dfa_0->dfa_7[label="classdef",color=red]
-  dfa_0->dfa_8[label="try_stmt",color=red]
-  dfa_0->dfa_9[label="decorated",color=red]
+  dfa_0->dfa_2[label="try_stmt",color=red]
+  dfa_0->dfa_3[label="with_stmt",color=red]
+  dfa_0->dfa_4[label="decorated",color=red]
+  dfa_0->dfa_5[label="while_stmt",color=red]
+  dfa_0->dfa_6[label="funcdef",color=red]
+  dfa_0->dfa_7[label="async_stmt",color=red]
+  dfa_0->dfa_8[label="for_stmt",color=red]
+  dfa_0->dfa_9[label="classdef",color=red]
   dfa_1[shape=doublecircle]
   dfa_2[shape=doublecircle]
   dfa_3[shape=doublecircle]
@@ -51,14 +51,14 @@ digraph compound_stmt {
   }
  subgraph compound_stmt_m_dfa {
   m_dfa_0->m_dfa_1[label="if_stmt",color=red]
+  m_dfa_0->m_dfa_1[label="try_stmt",color=red]
   m_dfa_0->m_dfa_1[label="with_stmt",color=red]
-  m_dfa_0->m_dfa_1[label="async_stmt",color=red]
+  m_dfa_0->m_dfa_1[label="decorated",color=red]
   m_dfa_0->m_dfa_1[label="while_stmt",color=red]
   m_dfa_0->m_dfa_1[label="funcdef",color=red]
+  m_dfa_0->m_dfa_1[label="async_stmt",color=red]
   m_dfa_0->m_dfa_1[label="for_stmt",color=red]
   m_dfa_0->m_dfa_1[label="classdef",color=red]
-  m_dfa_0->m_dfa_1[label="try_stmt",color=red]
-  m_dfa_0->m_dfa_1[label="decorated",color=red]
   m_dfa_1[shape=doublecircle]
   }
 }

@@ -11,10 +11,10 @@ digraph comp_for {
   nfa_1->nfa_4[label="epsilon"]
   }
  subgraph comp_for_dfa {
-  dfa_0->dfa_1[label="ASYNC"]
-  dfa_1->dfa_2[label="sync_comp_for",color=red]
-  dfa_0->dfa_2[label="sync_comp_for",color=red]
-  dfa_2[shape=doublecircle]
+  dfa_0->dfa_1[label="sync_comp_for",color=red]
+  dfa_0->dfa_2[label="ASYNC"]
+  dfa_2->dfa_1[label="sync_comp_for",color=red]
+  dfa_1[shape=doublecircle]
   }
  subgraph comp_for_m_dfa {
   m_dfa_0->m_dfa_1[label="sync_comp_for",color=red]

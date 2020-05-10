@@ -14,10 +14,10 @@ digraph parameters {
   }
  subgraph parameters_dfa {
   dfa_0->dfa_1[label="'('"]
-  dfa_1->dfa_2[label="typedargslist"]
-  dfa_2->dfa_3[label="')'",color=red]
-  dfa_1->dfa_3[label="')'",color=red]
-  dfa_3[shape=doublecircle]
+  dfa_1->dfa_2[label="')'",color=red]
+  dfa_1->dfa_3[label="typedargslist"]
+  dfa_3->dfa_2[label="')'",color=red]
+  dfa_2[shape=doublecircle]
   }
  subgraph parameters_m_dfa {
   m_dfa_0->m_dfa_1[label="'('"]

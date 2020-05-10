@@ -18,11 +18,11 @@ digraph flow_stmt {
   nfa_11->nfa_3[label="epsilon"]
   }
  subgraph flow_stmt_dfa {
-  dfa_0->dfa_1[label="continue_stmt",color=red]
-  dfa_0->dfa_2[label="yield_stmt",color=red]
-  dfa_0->dfa_3[label="return_stmt",color=red]
-  dfa_0->dfa_4[label="raise_stmt",color=red]
-  dfa_0->dfa_5[label="break_stmt",color=red]
+  dfa_0->dfa_1[label="break_stmt",color=red]
+  dfa_0->dfa_2[label="raise_stmt",color=red]
+  dfa_0->dfa_3[label="continue_stmt",color=red]
+  dfa_0->dfa_4[label="yield_stmt",color=red]
+  dfa_0->dfa_5[label="return_stmt",color=red]
   dfa_1[shape=doublecircle]
   dfa_2[shape=doublecircle]
   dfa_3[shape=doublecircle]
@@ -30,11 +30,11 @@ digraph flow_stmt {
   dfa_5[shape=doublecircle]
   }
  subgraph flow_stmt_m_dfa {
+  m_dfa_0->m_dfa_1[label="break_stmt",color=red]
+  m_dfa_0->m_dfa_1[label="raise_stmt",color=red]
   m_dfa_0->m_dfa_1[label="continue_stmt",color=red]
   m_dfa_0->m_dfa_1[label="yield_stmt",color=red]
   m_dfa_0->m_dfa_1[label="return_stmt",color=red]
-  m_dfa_0->m_dfa_1[label="raise_stmt",color=red]
-  m_dfa_0->m_dfa_1[label="break_stmt",color=red]
   m_dfa_1[shape=doublecircle]
   }
 }

@@ -9,14 +9,14 @@ digraph stmt {
   nfa_5->nfa_3[label="epsilon"]
   }
  subgraph stmt_dfa {
-  dfa_0->dfa_1[label="simple_stmt",color=red]
-  dfa_0->dfa_2[label="compound_stmt",color=red]
+  dfa_0->dfa_1[label="compound_stmt",color=red]
+  dfa_0->dfa_2[label="simple_stmt",color=red]
   dfa_1[shape=doublecircle]
   dfa_2[shape=doublecircle]
   }
  subgraph stmt_m_dfa {
-  m_dfa_0->m_dfa_1[label="simple_stmt",color=red]
   m_dfa_0->m_dfa_1[label="compound_stmt",color=red]
+  m_dfa_0->m_dfa_1[label="simple_stmt",color=red]
   m_dfa_1[shape=doublecircle]
   }
 }

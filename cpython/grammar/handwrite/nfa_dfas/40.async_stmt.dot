@@ -17,18 +17,18 @@ digraph async_stmt {
   }
  subgraph async_stmt_dfa {
   dfa_0->dfa_1[label="ASYNC"]
-  dfa_1->dfa_2[label="funcdef",color=red]
+  dfa_1->dfa_2[label="for_stmt",color=red]
   dfa_1->dfa_3[label="with_stmt",color=red]
-  dfa_1->dfa_4[label="for_stmt",color=red]
+  dfa_1->dfa_4[label="funcdef",color=red]
   dfa_2[shape=doublecircle]
   dfa_3[shape=doublecircle]
   dfa_4[shape=doublecircle]
   }
  subgraph async_stmt_m_dfa {
   m_dfa_0->m_dfa_1[label="ASYNC"]
-  m_dfa_1->m_dfa_2[label="funcdef",color=red]
-  m_dfa_1->m_dfa_2[label="with_stmt",color=red]
   m_dfa_1->m_dfa_2[label="for_stmt",color=red]
+  m_dfa_1->m_dfa_2[label="with_stmt",color=red]
+  m_dfa_1->m_dfa_2[label="funcdef",color=red]
   m_dfa_2[shape=doublecircle]
   }
 }

@@ -167,7 +167,8 @@ def draw_no(no):
     rule_name, (rule_text, nfa, dfa, m_dfa) = rule_dfas[no]
     nfaArcs = hand_nfa_state.searchByArc(nfa)
     dfaArcs = hand_nfa_state.searchByArc((dfa, ))
-    hand_dot_draw.gen_dot_by_arcs(rule_name, rule_text, [(nfaArcs, "nfa"), (dfaArcs, "dfa")])
+    mdfaArcs = hand_nfa_state.searchByArc((m_dfa, ))
+    hand_dot_draw.gen_dot_by_arcs(rule_name, rule_text, [(nfaArcs, "nfa"), (dfaArcs, "dfa"), (mdfaArcs, "m_dfa")])
 
 from pprint import pprint
 
@@ -191,7 +192,8 @@ def explore(no):
     #        pprint(dd)
 
 @cli.command()
-def cal_first_set():
+@click.option("--rulename", type=click.STRING, default="", help="rule name")
+def cal_first_set(rulename):
     rule_dfas = genAllDfas(cur_token, tokens)
     rule_name_to_mdfa = {}
     rule_names = []
@@ -200,6 +202,7 @@ def cal_first_set():
         rule_name_to_mdfa[rule_name] = m_dfa
 
     terminal_set = set()
+    non_terminal_set = set(rule_names)
     rule_fset = {}
     def get_first_set(rn):
         if rn in rule_fset:
@@ -216,11 +219,15 @@ def cal_first_set():
         rule_fset[rn] = fset_rn
         return fset_rn
 
+    if rulename == "":
+        rulename = rule_names[0]
     for rn in sorted(rule_names):
         #print(rn, sorted(list(get_first_set(rn))))
-        get_first_set(rn)
-    print(terminal_set)
-
+        a = get_first_set(rn)
+        if rn == rulename:
+            print(rulename, a, len(a))
+    print("terminal_set:", terminal_set)
+    print("non-terminal-set:", non_terminal_set)
 
 
 def build_arc(minimize_dfaset, start_dfa):
@@ -237,6 +244,19 @@ def build_arc(minimize_dfaset, start_dfa):
                 for targetstate, arc in dfastate.arcs:
                     if targetstate in d_j:
                         d_i.add_arc(arc, d_j)
+
+    start_dfa_set.state_id = 0
+    state_id = {start_dfa_set:0}
+    def deal(dfa_set):
+        for target, _ in dfa_set.arcs:
+            if target in state_id:
+                continue
+            target.state_id = len(state_id)
+            state_id[target] = target.state_id
+            deal(target)
+
+    deal(start_dfa_set)
+
     return start_dfa_set
     arcs = hand_nfa_state.searchByArc((start_dfa_set,))
     return arcs
@@ -252,6 +272,8 @@ class DFASet:
                 self.isfinal = True
         
         self.arcs = []
+
+        self.state_id = -1
 
     def add_arc(self, arc, target):
         for t, a in self.arcs:

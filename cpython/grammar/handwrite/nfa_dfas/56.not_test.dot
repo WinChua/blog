@@ -11,10 +11,10 @@ digraph not_test {
   nfa_7->nfa_5[label="epsilon"]
   }
  subgraph not_test_dfa {
-  dfa_0->dfa_1[label="'not'"]
-  dfa_1->dfa_2[label="not_test",color=red]
-  dfa_0->dfa_3[label="comparison",color=red]
-  dfa_2[shape=doublecircle]
+  dfa_0->dfa_1[label="comparison",color=red]
+  dfa_0->dfa_2[label="'not'"]
+  dfa_2->dfa_3[label="not_test",color=red]
+  dfa_1[shape=doublecircle]
   dfa_3[shape=doublecircle]
   }
  subgraph not_test_m_dfa {

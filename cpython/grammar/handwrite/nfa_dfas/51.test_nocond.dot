@@ -9,14 +9,14 @@ digraph test_nocond {
   nfa_5->nfa_3[label="epsilon"]
   }
  subgraph test_nocond_dfa {
-  dfa_0->dfa_1[label="or_test",color=red]
-  dfa_0->dfa_2[label="lambdef_nocond",color=red]
+  dfa_0->dfa_1[label="lambdef_nocond",color=red]
+  dfa_0->dfa_2[label="or_test",color=red]
   dfa_1[shape=doublecircle]
   dfa_2[shape=doublecircle]
   }
  subgraph test_nocond_m_dfa {
-  m_dfa_0->m_dfa_1[label="or_test",color=red]
   m_dfa_0->m_dfa_1[label="lambdef_nocond",color=red]
+  m_dfa_0->m_dfa_1[label="or_test",color=red]
   m_dfa_1[shape=doublecircle]
   }
 }

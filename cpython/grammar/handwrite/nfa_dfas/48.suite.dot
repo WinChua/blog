@@ -16,13 +16,13 @@ digraph suite {
   nfa_11->nfa_3[label="epsilon"]
   }
  subgraph suite_dfa {
-  dfa_0->dfa_1[label="simple_stmt",color=red]
-  dfa_0->dfa_2[label="NEWLINE"]
-  dfa_2->dfa_3[label="INDENT"]
-  dfa_3->dfa_4[label="stmt"]
-  dfa_4->dfa_4[label="stmt"]
-  dfa_4->dfa_5[label="DEDENT",color=red]
-  dfa_1[shape=doublecircle]
+  dfa_0->dfa_1[label="NEWLINE"]
+  dfa_1->dfa_2[label="INDENT"]
+  dfa_2->dfa_3[label="stmt"]
+  dfa_3->dfa_3[label="stmt"]
+  dfa_3->dfa_4[label="DEDENT",color=red]
+  dfa_0->dfa_5[label="simple_stmt",color=red]
+  dfa_4[shape=doublecircle]
   dfa_5[shape=doublecircle]
   }
  subgraph suite_m_dfa {

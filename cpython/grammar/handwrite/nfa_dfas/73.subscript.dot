@@ -24,12 +24,12 @@ digraph subscript {
   nfa_4->nfa_7[label="epsilon"]
   }
  subgraph subscript_dfa {
-  dfa_0->dfa_1[label="':'",color=red]
-  dfa_1->dfa_2[label="sliceop",color=red]
-  dfa_1->dfa_3[label="test",color=red]
-  dfa_3->dfa_2[label="sliceop",color=red]
-  dfa_0->dfa_4[label="test",color=red]
-  dfa_4->dfa_1[label="':'",color=red]
+  dfa_0->dfa_1[label="test",color=red]
+  dfa_1->dfa_2[label="':'",color=red]
+  dfa_2->dfa_3[label="sliceop",color=red]
+  dfa_2->dfa_4[label="test",color=red]
+  dfa_4->dfa_3[label="sliceop",color=red]
+  dfa_0->dfa_2[label="':'",color=red]
   dfa_1[shape=doublecircle]
   dfa_2[shape=doublecircle]
   dfa_3[shape=doublecircle]

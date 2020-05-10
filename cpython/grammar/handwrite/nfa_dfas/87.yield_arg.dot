@@ -11,10 +11,10 @@ digraph yield_arg {
   nfa_7->nfa_5[label="epsilon"]
   }
  subgraph yield_arg_dfa {
-  dfa_0->dfa_1[label="testlist_star_expr",color=red]
-  dfa_0->dfa_2[label="'from'"]
-  dfa_2->dfa_3[label="test",color=red]
-  dfa_1[shape=doublecircle]
+  dfa_0->dfa_1[label="'from'"]
+  dfa_1->dfa_2[label="test",color=red]
+  dfa_0->dfa_3[label="testlist_star_expr",color=red]
+  dfa_2[shape=doublecircle]
   dfa_3[shape=doublecircle]
   }
  subgraph yield_arg_m_dfa {

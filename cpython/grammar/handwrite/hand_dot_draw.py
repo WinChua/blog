@@ -43,7 +43,11 @@ def gen_dot_by_arcs_type(rulename, allArcs, t="nfa", file=None):
         sid = state_id.setdefault(s, len(state_id))
         eid = state_id.setdefault(e, len(state_id))
         a = a if a else "epsilon"
-        if t == "dfa" or t == "m_dfa":
+        if t == "m_dfa":
+            print(f'{t}_{s.state_id}->{t}_{e.state_id}[label="{a}"{",color=red" if e.isfinal else ""}]',file=file)
+            if e.isfinal:
+                final_state.add(e.state_id)
+        elif t == "dfa" or t == "m_dfa":
             print(f'{t}_{sid}->{t}_{eid}[label="{a}"{",color=red" if e.isfinal else ""}]',file=file)
             if e.isfinal:
                 final_state.add(eid)
@@ -54,3 +58,4 @@ def gen_dot_by_arcs_type(rulename, allArcs, t="nfa", file=None):
         print(f'  {t}_{e}[shape=doublecircle]', file=file)
 
     print("  }", file=file)
+

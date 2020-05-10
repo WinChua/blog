@@ -33,14 +33,14 @@ digraph testlist_comp {
   nfa_25->nfa_4[label="epsilon"]
   }
  subgraph testlist_comp_dfa {
-  dfa_0->dfa_1[label="star_expr",color=red]
+  dfa_0->dfa_1[label="namedexpr_test",color=red]
   dfa_1->dfa_2[label="','",color=red]
   dfa_2->dfa_3[label="star_expr",color=red]
   dfa_3->dfa_2[label="','",color=red]
   dfa_2->dfa_4[label="namedexpr_test",color=red]
   dfa_4->dfa_2[label="','",color=red]
   dfa_1->dfa_5[label="comp_for",color=red]
-  dfa_0->dfa_6[label="namedexpr_test",color=red]
+  dfa_0->dfa_6[label="star_expr",color=red]
   dfa_6->dfa_2[label="','",color=red]
   dfa_6->dfa_5[label="comp_for",color=red]
   dfa_1[shape=doublecircle]
@@ -51,13 +51,13 @@ digraph testlist_comp {
   dfa_6[shape=doublecircle]
   }
  subgraph testlist_comp_m_dfa {
-  m_dfa_0->m_dfa_1[label="star_expr",color=red]
+  m_dfa_0->m_dfa_1[label="namedexpr_test",color=red]
   m_dfa_1->m_dfa_2[label="comp_for",color=red]
   m_dfa_1->m_dfa_3[label="','",color=red]
   m_dfa_3->m_dfa_4[label="star_expr",color=red]
   m_dfa_4->m_dfa_3[label="','",color=red]
   m_dfa_3->m_dfa_4[label="namedexpr_test",color=red]
-  m_dfa_0->m_dfa_1[label="namedexpr_test",color=red]
+  m_dfa_0->m_dfa_1[label="star_expr",color=red]
   m_dfa_1[shape=doublecircle]
   m_dfa_2[shape=doublecircle]
   m_dfa_3[shape=doublecircle]

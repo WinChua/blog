@@ -23,11 +23,11 @@ digraph factor {
   dfa_1->dfa_2[label="factor",color=red]
   dfa_0->dfa_3[label="'-'"]
   dfa_3->dfa_2[label="factor",color=red]
-  dfa_0->dfa_4[label="'~'"]
-  dfa_4->dfa_2[label="factor",color=red]
-  dfa_0->dfa_5[label="power",color=red]
+  dfa_0->dfa_4[label="power",color=red]
+  dfa_0->dfa_5[label="'~'"]
+  dfa_5->dfa_2[label="factor",color=red]
   dfa_2[shape=doublecircle]
-  dfa_5[shape=doublecircle]
+  dfa_4[shape=doublecircle]
   }
  subgraph factor_m_dfa {
   m_dfa_0->m_dfa_1[label="power",color=red]
