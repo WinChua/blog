@@ -11,11 +11,11 @@ do
     fi
     if [ -n ${last} ]
     then
-        src="${last}\ ${1}"
+        src="${last} ${1}"
     else
         src="${1}"
     fi
-    cp  "$src" .
+    cp  "'$src'" .
     base=`basename $1`
     echo https://github.com/WinChua/blog/blob/master/asset/${base}
     shift
