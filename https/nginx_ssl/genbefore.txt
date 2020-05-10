@@ -1,0 +1,5 @@
+/etc/pki/CA
+/etc/pki/CA/certs
+/etc/pki/CA/crl
+/etc/pki/CA/newcerts
+/etc/pki/CA/private

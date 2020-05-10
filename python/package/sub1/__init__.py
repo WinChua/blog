@@ -1,0 +1,5 @@
+print("sub1 start")
+print(__file__)
+print(__name__)
+print(__path__)
+print("sub1 end")

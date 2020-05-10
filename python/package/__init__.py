@@ -1,0 +1,5 @@
+print("pakcage init")
+print(__file__)
+print(__path__)
+print(__name__)
+print("package end")
