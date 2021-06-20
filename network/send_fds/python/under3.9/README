@@ -1,0 +1,5 @@
+# python3.9 以下如何使用unix的control msg进行进程间sock传递
+
+* python old_server.py # 监听 unix.sock 的unix socket; 等待unix 链接; 监听 :12345的tcp链接; 等待tcp链接完成; 将tcp socket 发送到unix链接对端
+* 打开另外一个窗口 python new_server.py # 连接 unix.sock 上的unix socket; 接收fd && 从fd中重建sock; 进行收发数据
+* 打开另外一个窗口 nc localhost 12345 # 链接old_server中监听的端口; 与new_server中的逻辑进行通讯
