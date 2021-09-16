@@ -17,3 +17,7 @@ func TryCgo() {
 	fmt.Println(C.GoString(C.CString("Hello")))
 	fmt.Println("build +cgo")
 }
+
+func Add(a, b int) int32 {
+	return int32(C.add(C.int(a), C.int(b)))
+}

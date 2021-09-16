@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	_ "unsafe"
 )
 
 // 几点注意:
@@ -14,9 +13,8 @@ import (
 
 // CGO_ENABLED=0 go build
 
-import "C"
-
 func main() {
 	TryCgo()
-	fmt.Printf("%T\n", C.malloc(C.ulong(12)))
+	//fmt.Printf("%T\n", C.malloc(C.ulong(12)))
+	fmt.Println(Add(42, 32))
 }
