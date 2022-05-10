@@ -6,7 +6,7 @@ SVR_CRT_KEY=$(SVR_CRT)_key
 SVR_CSR=$(SVR_CRT)_csr
 
 test: selfsign csr sign
-	python main.py $(SVR_CRT).pem $(SVR_CRT_KEY).pem &
+	python main.py $(SVR_CRT).pem $(SVR_CRT_KEY).pem
 	curl --cacert $(SELF_SIGN).pem https://localhost:5000/
 
 
