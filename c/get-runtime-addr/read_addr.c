@@ -6,8 +6,8 @@
 #include <elf.h>
 
 int main(int argc, char * argv[]) {
-  if (argc <= 2) {
-    printf("Usage: %s pid section_name\n", argv[0]);
+  if (argc <= 3) {
+    printf("Usage: %s pid section_name pattern\n", argv[0]);
     return 0;
   }
   char filename[50];
@@ -27,6 +27,9 @@ int main(int argc, char * argv[]) {
       continue;
     }
     const char *path = line + path_pos;
+    if (strstr(path, argv[3]) == NULL) {
+      continue;
+    }
     const char *filename = strrchr(path, '/');
     if (filename) {
         filename++;  // Move past the '/'
@@ -36,7 +39,10 @@ int main(int argc, char * argv[]) {
     int fd = open(filename, O_RDONLY);
     struct stat file_stats;
     if (fstat(fd, &file_stats) != 0) {
-      continue;
+      fd = open(path, O_RDONLY);
+      if (fstat(fd, &file_stats) != 0) {
+        continue;
+      }
     }
     void *file_memory = NULL;
     file_memory = mmap(NULL, file_stats.st_size, PROT_READ, MAP_PRIVATE, fd, 0);
@@ -52,7 +58,6 @@ int main(int argc, char * argv[]) {
         // Move 1 character to account for the leading "."
         this_sec_name += 1;
         if (strcmp(this_sec_name, argv[2]) == 0) {
-          printf("find\n");
           section = &section_header_table[i];
           break;
         }
@@ -76,7 +81,7 @@ int main(int argc, char * argv[]) {
       result = start_address + (uintptr_t)section->sh_addr - elf_load_addr;
     }
     if (result != 0) {
-      printf("result is %p\n", (void*)result);
+      printf("%p", (void*)result);
       return 0;
     }
   }
